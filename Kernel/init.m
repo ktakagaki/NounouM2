@@ -61,6 +61,9 @@ NounouM2`IncreaseJavaStack[3072];
 NN=LoadJavaClass["nounou.NN"(*, StaticsVisible\[Rule]True*)];
 
 
+Needs["NounouM2`Plotting`"]
+
+
 (*LoadJavaClass["de.ifn_magdeburg.kazukazuj.K"];
 LoadJavaClass["de.ifn_magdeburg.kazukazuj.Kc"];
 LoadJavaClass["de.ifn_magdeburg.kazukazuj.Ks"];
