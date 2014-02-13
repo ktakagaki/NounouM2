@@ -1,0 +1,81 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1865,         71]
+NotebookOptionsPosition[      1381,         48]
+NotebookOutlinePosition[      1724,         63]
+CellTagsIndexPosition[      1681,         60]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Test Data Trace Plotting", "Title",
+ CellChangeTimes->{{3.6000809243998537`*^9, 3.6000809304792013`*^9}, {
+  3.600114600836507*^9, 3.6001146015385475`*^9}, {3.601276829674528*^9, 
+  3.6012768326646986`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "NounouM2`"}]], "Input",
+ CellChangeTimes->{{3.601276597725261*^9, 3.601276600971447*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Welcome to NounouM2, the Mathematica interface to nounou!\"\
+\>"], "Print",
+ CellChangeTimes->{3.6012766017944937`*^9}],
+
+Cell[BoxData["\<\"(last updated:  Thu 13 Feb 2014 11:32:30)\"\>"], "Print",
+ CellChangeTimes->{3.6012766017944937`*^9}],
+
+Cell[BoxData["\<\"<<Set JLink` java stack size to 3072Mb>>\"\>"], "Print",
+ CellChangeTimes->{3.6012766018274956`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{952, 1129},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 213, 3, 90, "Title"],
+Cell[CellGroupData[{
+Cell[817, 29, 119, 2, 31, "Input"],
+Cell[CellGroupData[{
+Cell[961, 35, 137, 2, 23, "Print"],
+Cell[1101, 39, 119, 1, 23, "Print"],
+Cell[1223, 42, 118, 1, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
