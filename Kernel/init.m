@@ -58,7 +58,7 @@ NounouM2`IncreaseJavaStack[stackSize_Integer]:=
 NounouM2`IncreaseJavaStack[3072];
 
 
-NNJ=LoadJavaClass["nounou.NNJ"(*, StaticsVisible\[Rule]True*)];
+NN=LoadJavaClass["nounou.NN"(*, StaticsVisible\[Rule]True*)];
 
 
 (*LoadJavaClass["de.ifn_magdeburg.kazukazuj.K"];
