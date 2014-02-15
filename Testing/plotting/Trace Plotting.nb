@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      1865,         71]
-NotebookOptionsPosition[      1381,         48]
-NotebookOutlinePosition[      1724,         63]
-CellTagsIndexPosition[      1681,         60]
+NotebookDataLength[     10903,        307]
+NotebookOptionsPosition[      9562,        255]
+NotebookOutlinePosition[      9905,        270]
+CellTagsIndexPosition[      9862,        267]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,18 +35,225 @@ Cell[CellGroupData[{
 
 Cell[BoxData["\<\"Welcome to NounouM2, the Mathematica interface to nounou!\"\
 \>"], "Print",
- CellChangeTimes->{3.6012766017944937`*^9}],
+ CellChangeTimes->{3.6012766017944937`*^9, 3.601357207093853*^9, 
+  3.6013579105900908`*^9, 3.6013580218954573`*^9, 3.601358418721154*^9, 
+  3.6014018787219243`*^9, 3.601404616970543*^9, 3.601405003089628*^9, 
+  3.6014050656242046`*^9, 3.6014055510139675`*^9}],
 
-Cell[BoxData["\<\"(last updated:  Thu 13 Feb 2014 11:32:30)\"\>"], "Print",
- CellChangeTimes->{3.6012766017944937`*^9}],
+Cell[BoxData["\<\"(last updated:  Fri 14 Feb 2014 23:25:11)\"\>"], "Print",
+ CellChangeTimes->{3.6012766017944937`*^9, 3.601357207093853*^9, 
+  3.6013579105900908`*^9, 3.6013580218954573`*^9, 3.601358418721154*^9, 
+  3.6014018787219243`*^9, 3.601404616970543*^9, 3.601405003089628*^9, 
+  3.6014050656242046`*^9, 3.601405551014968*^9}],
 
 Cell[BoxData["\<\"<<Set JLink` java stack size to 3072Mb>>\"\>"], "Print",
- CellChangeTimes->{3.6012766018274956`*^9}]
+ CellChangeTimes->{3.6012766017944937`*^9, 3.601357207093853*^9, 
+  3.6013579105900908`*^9, 3.6013580218954573`*^9, 3.601358418721154*^9, 
+  3.6014018787219243`*^9, 3.601404616970543*^9, 3.601405003089628*^9, 
+  3.6014050656242046`*^9, 3.60140555105297*^9}]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ShowJavaConsole", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.6014050373345866`*^9, 3.6014050431119175`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{
+    "com", ".", "wolfram", ".", "jlink", ".", "ui", ".", "ConsoleWindow"}], 
+    "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm1`JavaObject10526328147148801]], "Output",
+ CellChangeTimes->{{3.6014050410638*^9, 3.601405067147292*^9}, 
+   3.601405552331043*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "testDataFileDirectory", " ", "=", " ", 
+   "\"\<V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-12-02_\
+17-07-31\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6013572155643377`*^9, 3.601357235971505*^9}, {
+  3.6013576068407173`*^9, 3.6013576109839544`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"FileNames", "[", 
+   RowBox[{"testDataFileDirectory", "<>", "\"\<\\\\*\>\""}], "]"}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{
+  3.6013572069888473`*^9, {3.6013572510583677`*^9, 3.601357268514366*^9}, 
+   3.601357615185195*^9, {3.60135842877973*^9, 3.6013584305778327`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"testFiles4", "=", 
+  RowBox[{"FileNames", "[", 
+   RowBox[{"testDataFileDirectory", "<>", "\"\<\\\\Tet4*.ncs\>\""}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6013575466412745`*^9, 3.6013575533626585`*^9}, 
+   3.6013576167372837`*^9, 3.6013579207606726`*^9, {3.6013584668829093`*^9, 
+   3.6013584752103853`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\\
+2013-12-02_17-07-31\\\\Tet4a.ncs\"\>", 
+   ",", "\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-\
+12-02_17-07-31\\\\Tet4b.ncs\"\>", 
+   ",", "\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-\
+12-02_17-07-31\\\\Tet4c.ncs\"\>", 
+   ",", "\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-\
+12-02_17-07-31\\\\Tet4d.ncs\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.60135755372968*^9, {3.6013579161214075`*^9, 3.6013579213557067`*^9}, 
+   3.6013580263547125`*^9, 3.601358424257471*^9, 3.601358478471572*^9, 
+   3.601401884294243*^9, 3.601404620811763*^9, 3.601405004608715*^9, 
+   3.601405069725439*^9, 3.6014055555272255`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Methods", "[", "NN", "]"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.601358545480405*^9, 3.6013585482575636`*^9}, {
+  3.601405011049083*^9, 3.601405012272153*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"\<\"boolean equals(Object)\"\>"},
+     {"\<\"static nounou.FrameRange frames(int, int)\"\>"},
+     {"\<\"static nounou.FrameRange frames(int, int, int)\"\>"},
+     {"\<\"Class getClass()\"\>"},
+     {"\<\"static int get(int)\"\>"},
+     {"\<\"int hashCode()\"\>"},
+     {"\<\"static nounou.DataReader newReader()\"\>"},
+     {"\<\"void notify()\"\>"},
+     {"\<\"void notifyAll()\"\>"},
+     {"\<\"String toString()\"\>"},
+     {"\<\"void wait(long, int) throws InterruptedException\"\>"},
+     {"\<\"void wait(long) throws InterruptedException\"\>"},
+     {"\<\"void wait() throws InterruptedException\"\>"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.601358548474576*^9, 3.6014018868003864`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$Reader", " ", "=", " ", 
+  RowBox[{"NN`newReader", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6013576332662287`*^9, 3.601357633383236*^9}, {
+  3.601357927062033*^9, 3.6013579537975626`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[LeftGuillemet]", 
+   RowBox[{"JavaObject", "[", 
+    RowBox[{"nounou", ".", "DataReader"}], "]"}], "\[RightGuillemet]"}],
+  JLink`Objects`vm1`JavaObject7583008013942785]], "Output",
+ CellChangeTimes->{3.601357633653251*^9, 3.6013579235828342`*^9, 
+  3.6013579581498113`*^9, 3.6013580317570214`*^9, 3.6013584338760214`*^9, 
+  3.6014018939177933`*^9, 3.601404623766932*^9, 3.6014050138662443`*^9, 
+  3.601405071641549*^9, 3.601405557162319*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"$Reader", "@", 
+  RowBox[{"load", "[", "testFiles4", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6013572943418436`*^9, 3.6013573034493647`*^9}, {
+  3.601357457129154*^9, 3.601357489776022*^9}, {3.6013575264661207`*^9, 
+  3.601357567576472*^9}, {3.6013579649582005`*^9, 3.6013579753007927`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$Reader", "@", 
+  RowBox[{"dataSummary", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.601401901807245*^9, 3.601401913364906*^9}}],
+
+Cell[BoxData["\<\"DataReader loaded data summary:\\n     header : XHeaderNull\
+\\n     data   : XData(4 channels, 1 segments, with lengths \
+Vector(151597056), fs=32000.0)\\n     dataAux: XDataNull\\n     layout : \
+XLayoutNull\\n     mask   : XMaskNull\\n     events : XEventsNull\\n     \
+spikes : XSpikesNull\"\>"], "Output",
+ CellChangeTimes->{3.601401916750099*^9, 3.6014046382937627`*^9, 
+  3.6014050280460553`*^9, 3.601405084575289*^9, 3.601405571981167*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"$Reader", "@", 
+   RowBox[{"readTrace", "[", 
+    RowBox[{"0", ",", " ", 
+     RowBox[{"NN`frames", "[", 
+      RowBox[{"0", ",", " ", "320000", ",", " ", "32"}], "]"}], ",", " ", 
+     "0"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6013585003958263`*^9, 3.6013585891699038`*^9}, {
+  3.6014049442512627`*^9, 3.601404944642285*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Java", "::", "excptn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"A Java exception occurred: \
+\[NoBreak]\\!\\(\\\"java.lang.StackOverflowError\\\\n\\\\tat \
+nounou.data.XDataImmutable.segmentCount(XData.scala:196)\\\\n\\\\tat \
+nounou.data.filters.XDataFilter.segmentCount(XDataFilter.scala:25)\\\\n\\\\\
+tat nounou.data.filters.XDat\\\" \[Ellipsis] \\\"\\\\tat \
+nounou.data.filters.XDataFilterDecimate$$anonfun$segmentLengths$1.apply(\
+XDataFilterDecimate.scala:92)\\\\n\\\\tat \
+scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:\
+244)\\\"\\)\[NoBreak].\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6014046380997515`*^9, 3.6014050482682123`*^9, 
+  3.601405096346962*^9, 3.6014055722751837`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListLinePlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\($Failed\\)\[NoBreak] is not a list of \
+numbers or pairs of numbers. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ListLinePlot\\\", ButtonNote -> \
+\\\"ListLinePlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6014046380997515`*^9, 3.6014050482682123`*^9, 
+  3.601405096346962*^9, 3.601405572366189*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", "$Failed", "]"}]], "Output",
+ CellChangeTimes->{3.6013585941051855`*^9, 3.6014019163700776`*^9, 
+  3.601404638210758*^9, 3.6014050483582172`*^9, 3.601405096434967*^9, 
+  3.601405572368189*^9}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{952, 1129},
+WindowSize->{952, 1089},
 WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
@@ -67,10 +274,39 @@ Cell[579, 22, 213, 3, 90, "Title"],
 Cell[CellGroupData[{
 Cell[817, 29, 119, 2, 31, "Input"],
 Cell[CellGroupData[{
-Cell[961, 35, 137, 2, 23, "Print"],
-Cell[1101, 39, 119, 1, 23, "Print"],
-Cell[1223, 42, 118, 1, 23, "Print"]
+Cell[961, 35, 354, 5, 23, "Print"],
+Cell[1318, 42, 334, 4, 23, "Print"],
+Cell[1655, 48, 332, 4, 23, "Print"]
 }, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2036, 58, 133, 2, 31, "Input"],
+Cell[2172, 62, 370, 9, 31, "Output"]
+}, Open  ]],
+Cell[2557, 74, 312, 7, 31, "Input"],
+Cell[2872, 83, 325, 7, 31, "Input"],
+Cell[CellGroupData[{
+Cell[3222, 94, 339, 7, 31, "Input"],
+Cell[3564, 103, 791, 14, 92, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4392, 122, 203, 4, 31, "Input"],
+Cell[4598, 128, 1217, 30, 253, "Output"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5852, 163, 218, 4, 25, "Input"],
+Cell[6073, 169, 489, 9, 31, "Output"]
+}, Open  ]],
+Cell[6577, 181, 315, 5, 31, "Input"],
+Cell[CellGroupData[{
+Cell[6917, 190, 154, 3, 31, "Input"],
+Cell[7074, 195, 465, 6, 172, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7576, 206, 395, 9, 31, "Input"],
+Cell[7974, 217, 781, 15, 107, "Message"],
+Cell[8758, 234, 537, 11, 21, "Message"],
+Cell[9298, 247, 236, 4, 31, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
@@ -78,4 +314,3 @@ Cell[1223, 42, 118, 1, 23, "Print"]
 *)
 
 (* End of internal cache information *)
-

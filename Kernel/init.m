@@ -58,6 +58,7 @@ NounouM2`IncreaseJavaStack[stackSize_Integer]:=
 NounouM2`IncreaseJavaStack[3072];
 
 
+(*Convenience object for static methods*)
 NN=LoadJavaClass["nounou.NN"(*, StaticsVisible\[Rule]True*)];
 
 
