@@ -28,6 +28,7 @@ Print["(last updated:  "<> $PackageNewestFileDate <>")"];
 NNStackAxes::usage=" ";
 NNAxes::usage=" ";
 NNStackListsBaselineCorrection::usage="";
+NNTracePlotUnit::usage="\"mS\" (default) or \"frames\"";
 
 
 (* ::Subsection::Closed:: *)
@@ -78,7 +79,7 @@ NNExtractRules::usage=
 (*DataReader Java Object Handling*)
 
 
-NNDataReaderJavaObjectQ
+NNDataReaderJavaObjectQ::usage="";
 
 
 (* ::Subsection::Closed:: *)

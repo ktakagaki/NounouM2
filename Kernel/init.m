@@ -65,9 +65,6 @@ NN=LoadJavaClass["nounou.NN"(*, StaticsVisible\[Rule]True*)];
 SetComplexClass["breeze.math.Complex"];
 
 
-Print[Context[]]
-
-
 Needs["NounouM2`Plotting`"];
 Needs["NounouM2`DataPlotting`"];
 

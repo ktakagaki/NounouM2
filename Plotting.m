@@ -55,10 +55,16 @@ NNListLinePlotStack::usage=
 "ListLinePlotMean plots multiple traces together, along with mean and standard error.";
 
 
+NNListLinePlotStack$UniqueOptions = NNJoinOptionLists[
+	{NNStackLists->Automatic, NNStackAxes->False, NNStackListsBaselineCorrection-> Mean},
+	{ AspectRatio->1/2, PlotRange->All}
+];
+ 
 Options[NNListLinePlotStack] =
 NNJoinOptionLists[
-	{NNStackLists->Automatic, NNStackAxes->False, NNStackListsBaselineCorrection-> Mean},
-	{ListLinePlotOptions->{PlotStyle->Black, AspectRatio->1/2, PlotRange->All}}
+	NNListLinePlotStack$UniqueOptions,
+	Options[NNStackLists],
+	Options[ListLinePlot]
 ];
 
 
@@ -161,7 +167,7 @@ NNStackLists[traces_ /; MatrixQ[traces], stackAmplitude_, opts:OptionsPattern[]]
 	]]];
 
    (*tempData = traces - (Mean /@ traces);*)
-   addFactor = Range[Length[tempTraces]]*stackAmplitude;
+   addFactor = (Range[Length[tempTraces]]-1)*stackAmplitude;
    addFactor = Reverse[addFactor];
    (*tempData*)tempTraces + addFactor
    ];
@@ -171,7 +177,7 @@ NNStackLists[args___] := Message[NNStackLists::invalidArgs, {args}];
 
 
 NNListLinePlotStack[traces_/;Length[Dimensions[traces]]==2, opts:OptionsPattern[]]:=
-Module[{tempData, opStackLists, grStackAxes, n},
+Module[{tempData, opStackLists, opPlotRange, opAxesOriginX, grStackAxes, n},
 
 	(*Stack Traces*)
 	opStackLists=OptionValue[NNStackLists];
@@ -187,7 +193,21 @@ Module[{tempData, opStackLists, grStackAxes, n},
 			Message[NNListLinePlotStack::invalidOptionValue, NNStackLists, opStackLists]
 		]
 	];
-	
+
+	opPlotRange = OptionValue[PlotRange];
+	If[ opPlotRange === Automatic, 
+			opPlotRange = {All, {Min[#],Max[#]}& /@{- opStackLists, opStackLists*Length[traces]}}
+	];
+
+	opAxesOriginX = OptionValue[DataRange];
+	opAxesOriginX = 
+		If[ opAxesOriginX === Automatic,
+			0,
+		If[ ListQ[opAxesOriginX] && Length[opAxesOriginX]==2,
+			opAxesOriginX[[1]],
+			Message[ NNListLinePlotStack::invalidOptionValue, opAxesOriginX, DataRange ]
+		]];
+
 	grStackAxes = 
 		If[ OptionValue[NNStackAxes], 
 			{
@@ -202,8 +222,8 @@ Module[{tempData, opStackLists, grStackAxes, n},
 		Sequence@@NNJoinOptionLists[ ListLinePlot,
 			{opts},
 			grStackAxes,
-			{AxesOrigin -> {0, -opStackLists/2}},
-			OptionValue[NNListLinePlotStack, ListLinePlotOptions]
+			{AxesOrigin -> {opAxesOriginX, Min[- opStackLists, opStackLists*Length[traces]]}},
+			NNListLinePlotStack$UniqueOptions
 		]
 	]
 ];
