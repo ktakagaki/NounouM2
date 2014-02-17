@@ -22,6 +22,15 @@ Print["(last updated:  "<> $PackageNewestFileDate <>")"];
 
 
 (* ::Subsection:: *)
+(*Common Option Declarations*)
+
+
+NNStackAxes::usage=" ";
+NNAxes::usage=" ";
+NNStackListsBaselineCorrection::usage="";
+
+
+(* ::Subsection::Closed:: *)
 (*Global Utility Functions*)
 
 
@@ -66,6 +75,13 @@ NNExtractRules::usage=
 
 
 (* ::Subsection:: *)
+(*DataReader Java Object Handling*)
+
+
+NNDataReaderJavaObjectQ
+
+
+(* ::Subsection::Closed:: *)
 (*ReloadPackage*)
 
 
@@ -208,6 +224,19 @@ NNExtractRules[x_[arg___]]:=Flatten[If[NNRuleQ[#],#,{}]& /@ {arg}];
 
 
 NNExtractRules[args___]:=Message[NNExtractRules::invalidArgs,{args}];
+
+
+(* ::Subsection:: *)
+(*DataReader Java Object Handling*)
+
+
+NNDataReaderJavaObjectQ[
+	dataReaderJavaObj_/;(JavaObjectQ[dataReaderJavaObj] 
+					&& InstanceOf[dataReaderJavaObj, "nounou.DataReader"])
+						]:= True ;
+
+
+NNDataReaderJavaObjectQ[args___]:= False ;
 
 
 (* ::Subsection:: *)

@@ -62,7 +62,17 @@ NounouM2`IncreaseJavaStack[3072];
 NN=LoadJavaClass["nounou.NN"(*, StaticsVisible\[Rule]True*)];
 
 
-Needs["NounouM2`Plotting`"]
+SetComplexClass["breeze.math.Complex"];
+
+
+Print[Context[]]
+
+
+Needs["NounouM2`Plotting`"];
+Needs["NounouM2`DataPlotting`"];
+
+
+$NNReader = NN`newReader[]
 
 
 (*LoadJavaClass["de.ifn_magdeburg.kazukazuj.K"];

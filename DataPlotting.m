@@ -14,8 +14,8 @@ NNTracePlot[ <<JavaObject[nounou.DataReader]>> , channel(s), <<JavaObject[nounou
 
 
 Options[NNTracePlot] =
-JoinOptionLists[
-	{NNStackTraces->Automatic, (*ScaleBars->{None, None}, *) NNAxes->{"mS", "mV"} },
+NNJoinOptionLists[
+	{NNStackLists->Automatic, (*ScaleBars->{None, None}, *) NNAxes->{"mS", "mV"} , NNStackListsBaselineCorrection->Mean},
 	{PlotStyle->Black, AspectRatio->1/5, PlotRange->All}
 ];
 
@@ -31,6 +31,32 @@ NNSpikesPlot::usage="  ";
 
 
 Begin["`Private`"] (* Begin Private Context *) 
+
+
+NNTracePlot[ channels:{_Integer ..}, frames_Span, segment_:0, opts:OptionsPattern[] ]:= 
+	NNTracePlot[ Global`$NNReader, channels, frames, segment, opts];
+
+
+NNTracePlot[ channel_Integer, frames_Span, segment_:0, opts:OptionsPattern[] ]:= 
+	NNTracePlot[ Global`$NNReader, channel, frames, segment, opts];
+
+
+NNTracePlot[dataReader_/;NNDataReaderJavaObjectQ[dataReader], 
+			channels:{_Integer ..}, frames_Span, segment_:0, opts:OptionsPattern[]]:= 
+Block[{traces, opNNStackLists },
+
+  opNNStackLists = OptionValue[NNStackLists];
+  If[opNNStackLists === Automatic, opNNStackLists = - 100];  (* //ToDo: Make default more fancy *)
+
+  traces = dataReader@dataTraceAbs[#, NN`frameRange@@frames, segment]& /@ channels;
+  NNListLinePlotStack[ traces, 
+		NNStackLists -> opNNStackLists, 
+		NNStackAxes->True, 
+		NNStackListsBaselineCorrection->OptionValue[NNStackListsBaselineCorrection]]
+];
+
+
+NNTracePlot[args___]:=Message[NNTracePlot::invalidArgs,{args}];
 
 
 (* ::Section:: *)
