@@ -21,14 +21,15 @@ Print["Welcome to NounouM2, the Mathematica interface to nounou!"];
 Print["(last updated:  "<> $PackageNewestFileDate <>")"];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Common Option Declarations*)
 
 
 NNStackAxes::usage=" ";
 NNAxes::usage=" ";
-NNStackListsBaselineCorrection::usage="";
-NNTracePlotUnit::usage="\"mS\" (default) or \"frames\"";
+NNBaselineCorrection::usage="";
+NNUnit::usage="\"mS\" (default) or \"frames\"";
+NNMasking::usage=" ";
 
 
 (* ::Subsection::Closed:: *)
@@ -40,11 +41,14 @@ NNPadZeros::usage =
 "PadZeros[n,m] gives the numeral n string padded to m digits with zeros.";
 
 
+NNNextPower::usage=" ";
+
+
 NNFunctionQ::usage=
 "returns whether a given symbol is a pure function, or a function rule.";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Rule List and Option Handling*)
 
 
@@ -75,11 +79,12 @@ NNExtractRules::usage=
 "Extracts options from an object, e.g. NNMData[<<>>,  opt->1] ==> {opt->1}";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*DataReader Java Object Handling*)
 
 
 NNDataReaderJavaObjectQ::usage="";
+NNXDataJavaObjectQ::usage="";
 
 
 (* ::Subsection::Closed:: *)
@@ -100,7 +105,7 @@ be reloaded to test functionality, without losing any precalculated results in t
 Begin["`Private`"];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*NNPadZeros*)
 
 
@@ -109,6 +114,16 @@ NNPadZeros[n_,m_]:=Apply[StringJoin,Map[ToString,IntegerDigits[n, 10, m] ]];
 
 
 NNPadZeros[args___]:=Message[NNPadZeros::invalidArgs,{args}];
+
+
+(* ::Subsection:: *)
+(*NextPower/NextMultiple*)
+
+
+NNNextPower[base_, n_]:= Ceiling[Log[base, n]];
+
+
+NNNextPower[args___]:=Message[NNNextPower::invalidArgs,{args}];
 
 
 (* ::Subsection::Closed:: *)
@@ -127,7 +142,7 @@ NNFunctionQ[_]:=False;
 NNFunctionQ[args___]:=Message[NNFunctionQ::invalidArgs, {args}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Rule List/Option Handling*)
 
 
@@ -151,7 +166,7 @@ NNRuleQ[_] := False;
 NNRuleQ[args___]:=Message[NNRuleQ::invalidArgs,{args}];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*NNJoinOptionLists*)
 
 
@@ -193,7 +208,7 @@ NNJoinOptionLists[symbol_[contents_], x_/;NNRuleListQ[x], y__/;(And@@(NNRuleList
 NNJoinOptionLists[args___]:=Message[NNJoinOptionLists::invalidArgs,{args}];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*AddOptions*)
 
 
@@ -217,7 +232,7 @@ NNAddOptions[symbol_[contents___], {opts___}]:=
 NNAddOptions[args___]:=Message[NNAddOptions::invalidArgs,{args}];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*ExtractRules*)
 
 
@@ -227,7 +242,7 @@ NNExtractRules[x_[arg___]]:=Flatten[If[NNRuleQ[#],#,{}]& /@ {arg}];
 NNExtractRules[args___]:=Message[NNExtractRules::invalidArgs,{args}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*DataReader Java Object Handling*)
 
 
@@ -240,7 +255,16 @@ NNDataReaderJavaObjectQ[
 NNDataReaderJavaObjectQ[args___]:= False ;
 
 
-(* ::Subsection:: *)
+NNXDataJavaObjectQ[
+	xDataJavaObj_/;(JavaObjectQ[xDataJavaObj] 
+					&& InstanceOf[xDataJavaObj, "nounou.data.XData"])
+						]:= True ;
+
+
+NNXDataJavaObjectQ[args___]:= False ;
+
+
+(* ::Subsection::Closed:: *)
 (*ReloadPackage*)
 
 

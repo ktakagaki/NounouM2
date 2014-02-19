@@ -48,7 +48,7 @@ NNStackLists::usage="Augments a series of traces so that when plotted, they will
 "Default for NNStackLists when given as an option is to stack lists every 2*(mean RMS value) apart.";
 
 
-Options[NNStackLists] = {NNStackListsBaselineCorrection -> Mean};
+Options[NNStackLists] = {NNBaselineCorrection -> Mean};
 
 
 NNListLinePlotStack::usage=
@@ -56,7 +56,7 @@ NNListLinePlotStack::usage=
 
 
 NNListLinePlotStack$UniqueOptions = NNJoinOptionLists[
-	{NNStackLists->Automatic, NNStackAxes->False, NNStackListsBaselineCorrection-> Mean},
+	{NNStackLists->Automatic, NNStackAxes->False, NNBaselineCorrection-> Mean},
 	{ AspectRatio->1/2, PlotRange->All}
 ];
  
@@ -73,6 +73,9 @@ NNJoinOptionLists[
 
 
 Begin["`Private`"] (* Begin Private Context *) 
+
+
+(*ColorData[1] // InputForm*)
 
 
 (* ::Subsection::Closed:: *)
@@ -156,14 +159,14 @@ NNListLinePlotMean[args___] := Message[NNListLinePlotMean::invalidArgs, {args}];
 NNStackLists[traces_ /; MatrixQ[traces], stackAmplitude_, opts:OptionsPattern[]] :=
   Block[{tempTraces, addFactor, opNNStackListsBaselineCorrection},
 	
-	opNNStackListsBaselineCorrection = OptionValue[NNStackListsBaselineCorrection];
+	opNNStackListsBaselineCorrection = OptionValue[NNBaselineCorrection];
 	If[ opNNStackListsBaselineCorrection === Mean,
 		tempTraces = traces - Mean /@ traces,
 	If[ opNNStackListsBaselineCorrection === None,
 		tempTraces = traces,
 	If[ Head[opNNStackListsBaselineCorrection] === Span,
 		tempTraces = traces - (Mean[#[[ opNNStackListsBaselineCorrection ]]]& /@ traces),
-		Message[ NNStackLists::invalidOptionValue, NNStackListsBaselineCorrection, opNNStackListsBaselineCorrection]
+		Message[ NNStackLists::invalidOptionValue, NNBaselineCorrection, opNNStackListsBaselineCorrection]
 	]]];
 
    (*tempData = traces - (Mean /@ traces);*)
@@ -177,26 +180,40 @@ NNStackLists[args___] := Message[NNStackLists::invalidArgs, {args}];
 
 
 NNListLinePlotStack[traces_/;Length[Dimensions[traces]]==2, opts:OptionsPattern[]]:=
-Module[{tempData, opStackLists, opPlotRange, opAxesOriginX, grStackAxes, n},
+Module[{tempData, opNNBaselineCorrection, 
+		opNNStackLists, tempTickInterval,
+		opPlotRange, opAxesOriginX, grStackAxes, n},
+	
+	tempData = traces;
 
+	(*Correct baseline beforehand, since it changes NNStackLists handling.*)	
+	opNNBaselineCorrection = OptionValue[NNBaselineCorrection];
+	If[ opNNStackLists===Automatic && opNNBaselineCorrection === Mean,
+		tempData = tempData - Mean /@ tempData,
+	If[ Head[opNNBaselineCorrection] === Span,
+		tempData = tempData - (Mean[#[[ opNNBaselineCorrection ]]]& /@ tempData)
+	]];
 	(*Stack Traces*)
-	opStackLists=OptionValue[NNStackLists];
+	opNNStackLists=OptionValue[NNStackLists];
 
-	If[opStackLists===Automatic,
-		opStackLists=2*Mean[RootMeanSquare /@ traces ]
-	];
-
-	If[opStackLists==0 || opStackLists===None,
-		tempData = traces,
-		If[NumberQ[opStackLists],
-			tempData = NNStackLists[traces, opStackLists, NNStackListsBaselineCorrection -> OptionValue[NNStackListsBaselineCorrection]],
-			Message[NNListLinePlotStack::invalidOptionValue, NNStackLists, opStackLists]
+	If[opNNStackLists===Automatic,
+		opNNStackLists = (Quantile[Flatten[Abs /@ tempData], 0.95])*2;
+		If[opNNStackLists != 0,
+			tempTickInterval = NNNextPower[10, opNNStackLists]/5;
+			opNNStackLists = (Quotient[opNNStackLists, tempTickInterval] + 1)*tempTickInterval
 		]
 	];
 
-	opPlotRange = OptionValue[PlotRange];
+
+
+	If[opNNStackLists!=0 && opNNStackLists=!=None && NumberQ[opNNStackLists],
+		tempData = NNStackLists[tempData, opNNStackLists, 
+				NNBaselineCorrection -> OptionValue[NNBaselineCorrection]   ]
+	];
+
+	opPlotRange = OptionValue[PlotRange]; 
 	If[ opPlotRange === Automatic, 
-			opPlotRange = {All, {Min[#],Max[#]}& /@{- opStackLists, opStackLists*Length[traces]}}
+			opPlotRange = {All, {Min[#],Max[#]}& [{- opNNStackLists, opNNStackLists*Length[traces]}]  } 
 	];
 
 	opAxesOriginX = OptionValue[DataRange];
@@ -211,7 +228,7 @@ Module[{tempData, opStackLists, opPlotRange, opAxesOriginX, grStackAxes, n},
 	grStackAxes = 
 		If[ OptionValue[NNStackAxes], 
 			{
-			GridLines -> {None, Table[n*opStackLists, {n, 0, Length[traces]-1}]}
+			GridLines -> {None, Table[n*opNNStackLists, {n, 0, Length[traces]-1}]}
 			},
 			{}
 		];
@@ -222,7 +239,8 @@ Module[{tempData, opStackLists, opPlotRange, opAxesOriginX, grStackAxes, n},
 		Sequence@@NNJoinOptionLists[ ListLinePlot,
 			{opts},
 			grStackAxes,
-			{AxesOrigin -> {opAxesOriginX, Min[- opStackLists, opStackLists*Length[traces]]}},
+			{AxesOrigin -> {opAxesOriginX, Min[- opNNStackLists, opNNStackLists*Length[traces]]},
+			PlotRange -> opPlotRange},
 			NNListLinePlotStack$UniqueOptions
 		]
 	]

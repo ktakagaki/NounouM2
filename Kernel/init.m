@@ -60,16 +60,17 @@ NounouM2`IncreaseJavaStack[3072];
 
 (*Convenience object for static methods*)
 NN=LoadJavaClass["nounou.NN"(*, StaticsVisible\[Rule]True*)];
+NounouM2`$NNReader::usage="Main default reader object for NounouM2.";
+NounouM2`$NNReader = NN`newReader[];
 
 
 SetComplexClass["breeze.math.Complex"];
 
 
 Needs["NounouM2`Plotting`"];
+
+
 Needs["NounouM2`DataPlotting`"];
-
-
-$NNReader = NN`newReader[]
 
 
 (*LoadJavaClass["de.ifn_magdeburg.kazukazuj.K"];
