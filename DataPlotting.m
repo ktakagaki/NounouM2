@@ -15,7 +15,7 @@ NNTracePlot[ <<JavaObject[nounou.DataReader]>> , channel(s), <<JavaObject[nounou
 
 NNTracePlot$UniqueOptions = NNJoinOptionLists[ 
 	{NNStackLists->Automatic, (*ScaleBars->{None, None}, *)AspectRatio->Automatic,  
-	NNBaselineCorrection->Mean, NNUnit->"mS", NNMasking->True},
+	NNBaselineCorrection->Mean, NNUnit->"ms", NNMasking->True},
 	{PlotStyle->{Opacity[0.75]}, PlotRange->Automatic, BaseStyle->{FontFamily->"Helvetica"}, ImageSize->10*72}
 ];
 
@@ -62,47 +62,51 @@ NNTracePlot[xData_/;NNXDataJavaObjectQ[xData],
 
 
 NNTracePlot[xData_/;NNXDataJavaObjectQ[xData], 
-			channels:{_Integer ..}, times_Span, segment_:0, opts:OptionsPattern[]]:= 
+			channels:{_Integer ..}, span_Span, segment_:0, opts:OptionsPattern[]]:= 
 Block[{traces, tracesWidth,
-		opNNStackLists, 
-		grOptDataRange, frameSpan, frameSeg1, frameSeg2, opNNUnit, 
+		tempFullSpan, grOptDataRange, frameSpan, frameSeg1, frameSeg2, opNNUnit,opNNUnitMs, 
 		opAspectRatio, tempDataAbsUnit, tempMaskingEpilog },
 
-  opNNStackLists = OptionValue[NNStackLists];
-  (*If[opNNStackLists === Automatic, opNNStackLists = - 200];   //ToDo: Make default more fancy *)
+	opNNUnit = OptionValue[NNUnit];
+	opNNUnitMs = If[ opNNUnit === "ms", True,
+				If[ opNNUnit === "frames", False,
+					Message[ NNTracePlot::invalidOptionValue, opNNUnit, NNUnit ]
+				]];
 
-  (*==========Handle units... must change DataRange and also frames to extract.==========*)
-  frameSpan = {times[[1]], times[[2]]};
-  opNNUnit = OptionValue[NNUnit];
-  If[ opNNUnit === "ms" || opNNUnit === "mS" ,
-	frameSeg1 = xData@msToFrame[frameSpan[[1]]];
-	frameSeg2 = xData@msToFrame[frameSpan[[2]]];
+	(*==========Handle units and spans... must change DataRange and also frames to extract.==========*)
+	(*no All specifications for the span!*)
+	If[ ! (And@@NumberQ/@ span), Message[ NNTracePlot::invalidArgs, span ] ];
+	If[ opNNUnitMs,
+		frameSpan = {xData@msToFrame[span[[1]]], xData@msToFrame[span[[2]]]};
+		If[Length[span]==2, frameSpan = AppendTo[frameSpan, 1],
+		If[Length[span]==3, frameSpan = AppendTo[frameSpan, xData@msToFrame[span[[3]]]],
+			Message[ NNTracePlot::invalidArgs, span ]
+		]],
+		frameSpan = {span[[1]], span[[2]]};
+		If[Length[span]==2, frameSpan = AppendTo[frameSpan, 1],
+		If[Length[span]==3, frameSpan = AppendTo[frameSpan, span[[3]]],
+			Message[ NNTracePlot::invalidArgs, span ]
+		]]
+	];
+	grOptDataRange = {span[[1]], span[[2]]};
 
-    grOptDataRange = frameSpan;
-	frameSpan = {frameSeg1, frameSeg2},
-  If[ opNNUnit === "frames",
-	grOptDataRange = frameSpan,
-    Message[ NNTracePlot::invalidOptionValue, opNNUnit, NNUnit ]
-  ]];
-
-  (*==========Data==========*)
-  traces = xData@readTraceAbsA[#, NN`fr@@frameSpan, segment]& /@ channels;
+	(*==========Data==========*)
+	traces = xData@readTraceAbsA[#, NN`fr@@frameSpan, segment]& /@ channels;
     tracesWidth = Max[traces]-Min[traces];
 
-  (*==========Handle graphing options==========*)
-  opAspectRatio = OptionValue[AspectRatio];
-  If[ opAspectRatio === Automatic, opAspectRatio = 1/10*(Length[channels]+1) ];
+	(*==========Handle graphing options==========*)
+	opAspectRatio = OptionValue[AspectRatio];
+	If[ opAspectRatio === Automatic, opAspectRatio = 1/10*(Length[channels]+1) ];
 
-  tempDataAbsUnit = xData@absUnit[];
-  tempDataAbsUnit = StringReplace[tempDataAbsUnit, "micro" -> "\[Mu]" ];
-
-  tempMaskingEpilog = (NounouM2`$NNReader@mask[])@activeMasksA[frameSpan[[1]], frameSpan[[2]], segment, xData];
-
-  tempMaskingEpilog = If[Length[Flatten[tempMaskingEpilog]]==0,  
+	tempDataAbsUnit = xData@absUnit[];
+	tempDataAbsUnit = StringReplace[tempDataAbsUnit, "micro" -> "\[Mu]" ];
+	
+	tempMaskingEpilog = (NounouM2`$NNReader@mask[])@getActiveMasksA[frameSpan[[1]], frameSpan[[2]], segment, xData];
+	tempMaskingEpilog = If[Length[Flatten[tempMaskingEpilog]]==0,  
 		Graphics[],
 		Graphics[
 			Flatten[Join[{Opacity[0.2, Black]},
-				If[opNNUnit === "ms", 
+				If[opNNUnitMs, 
 			        {Rectangle[{(xData@tsToMs[#[[1]]]), - tracesWidth*5},
 								{(xData@tsToMs[#[[2]]]), tracesWidth*30}]}& /@ tempMaskingEpilog,
 					{Rectangle[{(xData@tsToFrameSegmentA[#[[1]]])[[1]], - tracesWidth*5},
@@ -110,14 +114,14 @@ Block[{traces, tracesWidth,
 				]
 			]]
 		]
-  ];
+	];
+
   (*==========Plot==========*)
   Show[
       NNListLinePlotStack[ traces,
 		Sequence@@NNJoinOptionLists[ NNListLinePlotStack,
 			{opts}, 
-			{NNStackLists -> opNNStackLists, 
-			NNStackAxes->True, 
+			{NNStackAxes->True, 
 			NNBaselineCorrection->OptionValue[NNBaselineCorrection],
 			AxesLabel->{opNNUnit, tempDataAbsUnit},
 			AspectRatio->opAspectRatio,
