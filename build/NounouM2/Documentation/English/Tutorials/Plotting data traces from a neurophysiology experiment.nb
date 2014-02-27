@@ -1,0 +1,218 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6851,        208]
+NotebookOptionsPosition[      4210,        130]
+NotebookOutlinePosition[      6120,        180]
+CellTagsIndexPosition[      6077,        177]
+WindowTitle->Plotting data traces from a neurophysiology experiment - Wolfram \
+Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "TutorialColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:NounouM2/guide/NounouM2"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["NOUNOU M2 TUTORIAL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->
+        False], {"\<\"NounouM2/tutorial/Plotting data traces from a \
+neurophysiology experiment\"\>":>None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+            "NounouM2/tutorial/Plotting data traces from a neurophysiology \
+experiment"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/NounouM2/tutorial/\
+Plotting data traces from a neurophysiology experiment.html"], StandardForm]],
+              "Input", TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "NounouM2/tutorial/Plotting data traces from a neurophysiology \
+experiment", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Plotting data traces from a neurophysiology experiment", "Title",
+ CellID->509267359],
+
+Cell["XXXX.", "Caption",
+ CellID->1891092685],
+
+Cell["\<\
+First, the data has to be loaded into a Java object, which serves as the \
+interface between the raw data on the harddisk, and the actual numerical data \
+which is needed\
+\>", "MathCaption",
+ CellID->836781195],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "NounouM2`"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->723922410],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Welcome to NounouM2, the Mathematica interface to nounou!\"\
+\>"], "Print",
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->293209924],
+
+Cell[BoxData["\<\"(last updated:  Thu 13 Feb 2014 11:32:30)\"\>"], "Print",
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->593976713],
+
+Cell[BoxData["\<\"<<Set JLink` java stack size to 3072Mb>>\"\>"], "Print",
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->214402055]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MORE ABOUT", "TutorialMoreAboutSection",
+ CellID->23220180],
+
+Cell["Data Structure in NounouM2", "TutorialMoreAbout",
+ CellID->1567025153]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Plotting data traces from a neurophysiology experiment - \
+Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2014, 2, 13, 18, 19, 45.6457311}", "context" -> "NounouM2`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Nounou M2 Tutorial", 
+    "language" -> "en", "paclet" -> "NounouM2", "status" -> "None", "summary" -> 
+    "XXXX. First, the data has to be loaded into a Java object, which serves \
+as the interface between the raw data on the harddisk, and the actual \
+numerical data which is needed", "synonyms" -> {}, "title" -> 
+    "Plotting data traces from a neurophysiology experiment", "type" -> 
+    "Tutorial", "uri" -> 
+    "NounouM2/tutorial/Plotting data traces from a neurophysiology \
+experiment"}, "LinkTrails" -> "", "SearchTextTranslated" -> ""},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[649, 22, 78, 1, 70, "TutorialColorBar"],
+Cell[730, 25, 182, 5, 70, "LinkTrail"],
+Cell[915, 32, 2074, 45, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3014, 81, 91, 1, 70, "Title",
+ CellID->509267359],
+Cell[3108, 84, 45, 1, 70, "Caption",
+ CellID->1891092685],
+Cell[3156, 87, 221, 5, 70, "MathCaption",
+ CellID->836781195],
+Cell[CellGroupData[{
+Cell[3402, 96, 96, 3, 70, "Input",
+ CellID->723922410],
+Cell[CellGroupData[{
+Cell[3523, 103, 157, 3, 70, "Print",
+ CellID->293209924],
+Cell[3683, 108, 139, 2, 70, "Print",
+ CellID->593976713],
+Cell[3825, 112, 138, 2, 70, "Print",
+ CellID->214402055]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4012, 120, 65, 1, 70, "TutorialMoreAboutSection",
+ CellID->23220180],
+Cell[4080, 123, 76, 1, 70, "TutorialMoreAbout",
+ CellID->1567025153]
+}, Open  ]]
+}, Open  ]],
+Cell[4183, 128, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

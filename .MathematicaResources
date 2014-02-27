@@ -1,0 +1,14 @@
+Resources[
+    Version[1],
+    Sources[
+        Directory["~"]
+    ],
+    Java[
+        Directory["NounouM2/Java"]
+    ],
+    ExecutionBuildCommand["<<NounouM2`"],
+    Paclet[
+        PacletFolder["NounouM2"],
+        FunctionPaclet[False]
+    ]
+]
