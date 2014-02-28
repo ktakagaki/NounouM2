@@ -38,31 +38,31 @@ NNSpikesPlot::usage="  ";
 Begin["`Private`"] (* Begin Private Context *) 
 
 
-NNTracePlot[ channels:{_Integer ..}, times_Span, segment_:0, opts:OptionsPattern[] ]:= 
-							NNTracePlot[ NounouM2`$NNReader@data[], channels, times, segment, opts];
+(* ::Subsection:: *)
+(*NNTracePlot*)
 
 
-NNTracePlot[ channel_Integer, times_Span, segment_:0, opts:OptionsPattern[] ]:= 
-							NNTracePlot[ NounouM2`$NNReader@data[], {channel}, times, segment, opts];
+NNTracePlot[ channels:{_Integer ..}, x___ ]:= NNTracePlot[ NounouM2`$NNReader@data[], channels, x];
+NNTracePlot[ channel_Integer, x___ ]:= NNTracePlot[ NounouM2`$NNReader@data[], channel, x];
 
 
-NNTracePlot[dataReader_/;NNDataReaderJavaObjectQ[dataReader], 
-			channel_Integer, times_Span, segment_:0, opts:OptionsPattern[]]:= 
-							NNTracePlot[dataReader@data[], {channel}, times, segment, opts]; 
+NNTracePlot[dataReader_/;NNDataReaderJavaObjectQ[dataReader], x___] := NNTracePlot[dataReader@data[], x]; 
 
 
-NNTracePlot[dataReader_/;NNDataReaderJavaObjectQ[dataReader], 
-			channels:{_Integer ..}, times_Span, segment_:0, opts:OptionsPattern[]]:= 
-							NNTracePlot[dataReader@data[], channels, times, segment, opts]; 
+NNTracePlot[xData_/;NNXDataJavaObjectQ[xData], channel_Integer , times_Span, opts:OptionsPattern[]]:= 
+							NNTracePlot[xData, {channel}, times, 0, opts];
 
 
-NNTracePlot[xData_/;NNXDataJavaObjectQ[xData], 
-			channel_Integer , times_Span, segment_:0, opts:OptionsPattern[]]:= 
+NNTracePlot[xData_/;NNXDataJavaObjectQ[xData], channel_Integer , times_Span, segment_/;NumberQ[segment], opts:OptionsPattern[]]:= 
 							NNTracePlot[xData, {channel}, times, segment, opts];
 
 
+NNTracePlot[xData_/;NNXDataJavaObjectQ[xData], channels:{_Integer ..}, span_Span, opts:OptionsPattern[]]:= 
+							NNTracePlot[xData, channels, span, 0, opts];
+
+
 NNTracePlot[xData_/;NNXDataJavaObjectQ[xData], 
-			channels:{_Integer ..}, span_Span, segment_:0, opts:OptionsPattern[]]:= 
+			channels:{_Integer ..}, span_Span, segment_/;NumberQ[segment], opts:OptionsPattern[]]:= 
 Block[{traces, tracesWidth,
 		tempFullSpan, grOptDataRange, frameSpan, frameSeg1, frameSeg2, opNNUnit,opNNUnitMs, 
 		opAspectRatio, tempDataAbsUnit, tempMaskingEpilog },
@@ -89,7 +89,7 @@ Block[{traces, tracesWidth,
 		]]
 	];
 	grOptDataRange = {span[[1]], span[[2]]};
-
+Print[segment];
 	(*==========Data==========*)
 	traces = xData@readTraceAbsA[#, NN`fr@@frameSpan, segment]& /@ channels;
     tracesWidth = Max[traces]-Min[traces];

@@ -79,12 +79,15 @@ NNExtractRules::usage=
 "Extracts options from an object, e.g. NNMData[<<>>,  opt->1] ==> {opt->1}";
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*DataReader Java Object Handling*)
 
 
-NNDataReaderJavaObjectQ::usage="";
-NNXDataJavaObjectQ::usage="";
+NNDataReaderJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.DataReader";
+NNXDataJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XData";
+NNXLayoutJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XLayout";
+NNXLayoutNullJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XLayoutNull";
+NNXLayoutSquareJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XLayoutSquare";
 
 
 (* ::Subsection::Closed:: *)
@@ -242,7 +245,7 @@ NNExtractRules[x_[arg___]]:=Flatten[If[NNRuleQ[#],#,{}]& /@ {arg}];
 NNExtractRules[args___]:=Message[NNExtractRules::invalidArgs,{args}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*DataReader Java Object Handling*)
 
 
@@ -250,18 +253,23 @@ NNDataReaderJavaObjectQ[
 	dataReaderJavaObj_/;(JavaObjectQ[dataReaderJavaObj] 
 					&& InstanceOf[dataReaderJavaObj, "nounou.DataReader"])
 						]:= True ;
-
-
 NNDataReaderJavaObjectQ[args___]:= False ;
 
 
-NNXDataJavaObjectQ[
-	xDataJavaObj_/;(JavaObjectQ[xDataJavaObj] 
-					&& InstanceOf[xDataJavaObj, "nounou.data.XData"])
-						]:= True ;
+NNXDataJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.data.XData"])]:= True;
+NNXDataJavaObjectQ[args___]:= False;
 
 
-NNXDataJavaObjectQ[args___]:= False ;
+NNXLayoutJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.data.XLayout"])]:= True;
+NNXLayoutJavaObjectQ[args___]:= False;
+
+
+NNXLayoutNullJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.data.XLayoutNull"])]:= True;
+NNXLayoutNullJavaObjectQ[args___]:= False;
+
+
+NNXLayoutSquareJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.data.XLayoutSquare"])]:= True;
+NNXLayoutSquareJavaObjectQ[args___]:= False;
 
 
 (* ::Subsection::Closed:: *)
