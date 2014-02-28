@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     82127,       1495]
-NotebookOptionsPosition[     80620,       1437]
-NotebookOutlinePosition[     80963,       1452]
-CellTagsIndexPosition[     80920,       1449]
+NotebookDataLength[     83929,       1552]
+NotebookOptionsPosition[     82019,       1479]
+NotebookOutlinePosition[     82363,       1494]
+CellTagsIndexPosition[     82320,       1491]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,51 +36,54 @@ Cell[CellGroupData[{
 Cell[BoxData["\<\"Welcome to NounouM2, the Mathematica interface to nounou!\"\
 \>"], "Print",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAuK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
+1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
 4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
 OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
 Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
 aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
 g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
 rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
-/eVlIJqnd4X7JCANALMR3RM=
+/eVlIJqnd4X7JCC97UGbYdr1V44aJ542g2gA2PXmig==
   "]],
 
-Cell[BoxData["\<\"(last updated:  Mon 17 Feb 2014 14:50:45)\"\>"], "Print",
+Cell[BoxData["\<\"      (last updated:  Fri 28 Feb 2014 17:09:05)\"\>"], \
+"Print",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAuK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
+1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
 4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
 OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
 Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
 aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
 g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
 rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
-/eVlINpu6gr3SUAaALTZ3U0=
+/eVlIJqnd4X7JCC97UGbYdp1oLoLT5tBNADatebD
+  "]],
+
+Cell[BoxData["\<\"      (current Git HEAD:  \
+ddbcb9738c5dd15276290efcd686597bae7fa38a)\"\>"], "Print",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
+4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
+OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
+Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
+aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
+g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
+rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
+/eVlIJqnd4X7JCC97UGbYdr1V45dN542g2gA3HXm/A==
   "]],
 
 Cell[BoxData["\<\"<<Set JLink` java stack size to 3072Mb>>\"\>"], "Print",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAuK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
+1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
 4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
 OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
 Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
 aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
 g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
 rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
-/eVlIHr/lZXuk4A0ALqg3g4=
+/eVlIJqnd4X7JCC97UGbYdr1V44pgc+bQTQA16DmUQ==
   "]]
-}, Open  ]],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\[LeftGuillemet]", 
-   RowBox[{"JavaObject", "[", 
-    RowBox[{"nounou", ".", "DataReader"}], "]"}], "\[RightGuillemet]"}],
-  JLink`Objects`vm1`JavaObject3099868906127361]], "Output",
- CellChangeTimes->{3.601574690765316*^9, 3.6015763583836985`*^9, 
-  3.6015765209429965`*^9, 3.6015770455760036`*^9, 3.601578022530882*^9, 
-  3.6015782534090877`*^9, 3.6015790002428045`*^9, 3.6016213817948904`*^9, 
-  3.601630394212371*^9, 3.601630519617544*^9, 3.6016338542472734`*^9}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -119,14 +122,53 @@ Cell[CellGroupData[{
 Cell["Load Data", "Section",
  CellChangeTimes->{{3.6015725768454065`*^9, 3.601572581191655*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{
-  RowBox[{
-  "testDataFileDirectory", " ", "=", " ", 
-   "\"\<V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-12-02_\
-17-07-31\>\""}], ";"}]], "Input",
+ RowBox[{"testDataFileDirectory", " ", "=", " ", 
+  RowBox[{"ParentDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.6013572155643377`*^9, 3.601357235971505*^9}, {
-  3.6013576068407173`*^9, 3.6013576109839544`*^9}}],
+  3.6013576068407173`*^9, 3.6013576109839544`*^9}, {3.6025914661123734`*^9, 
+  3.6025914841364045`*^9}}],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Kenta\\\\AppData\\\\Roaming\\\\Mathematica\\\
+\\Applications\\\\NounouM2\\\\Testing\"\>"], "Output",
+ CellChangeTimes->{{3.602591469403562*^9, 3.602591484511426*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", "testDataFileDirectory", "]"}]], "Input",
+ CellChangeTimes->{{3.6025914899997396`*^9, 3.602591496961138*^9}}],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Kenta\\\\AppData\\\\Roaming\\\\Mathematica\\\
+\\Applications\\\\NounouM2\\\\Testing\"\>"], "Output",
+ CellChangeTimes->{3.602591497394163*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Run", "[", "\"\<git rev-parse HEAD | gitHeadHash.txt\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6025914993062725`*^9, 3.602591584322135*^9}}],
+
+Cell[BoxData["255"], "Output",
+ CellChangeTimes->{
+  3.602591514794158*^9, {3.6025915556434946`*^9, 3.6025915847621603`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", "\"\<gitHeadHash.txt\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6025915564975433`*^9, 3.6025915644199963`*^9}}],
+
+Cell[BoxData["\<\"\"\>"], "Output",
+ CellChangeTimes->{3.602591564894024*^9}]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{"(*", " ", 
@@ -1436,7 +1478,7 @@ RRj/oqMQRe+MPdy3CP4H7uu/eg==
 }, Open  ]]
 },
 WindowSize->{952, 1089},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowMargins->{{Automatic, 6}, {26, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1456,44 +1498,59 @@ Cell[579, 22, 213, 3, 90, "Title"],
 Cell[CellGroupData[{
 Cell[817, 29, 119, 2, 31, "Input"],
 Cell[CellGroupData[{
-Cell[961, 35, 588, 11, 23, "Print"],
-Cell[1552, 48, 570, 10, 23, "Print"],
-Cell[2125, 60, 569, 10, 23, "Print"]
-}, Open  ]],
-Cell[2709, 73, 513, 9, 31, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[3259, 87, 133, 2, 31, "Input"],
-Cell[3395, 91, 1345, 22, 31, "Output"]
+Cell[961, 35, 608, 11, 23, "Print"],
+Cell[1572, 48, 594, 11, 23, "Print"],
+Cell[2169, 61, 618, 11, 23, "Print"],
+Cell[2790, 74, 589, 10, 23, "Print"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4777, 118, 96, 1, 79, "Section"],
-Cell[4876, 121, 312, 7, 31, "Input"],
-Cell[5191, 130, 325, 7, 31, "Input"],
-Cell[CellGroupData[{
-Cell[5541, 141, 339, 7, 31, "Input"],
-Cell[5883, 150, 1816, 28, 92, "Output"]
-}, Open  ]],
-Cell[7714, 181, 203, 4, 31, "Input"],
-Cell[CellGroupData[{
-Cell[7942, 189, 273, 5, 31, "Input"],
-Cell[8218, 196, 1482, 23, 31, "Output"]
-}, Open  ]],
-Cell[9715, 222, 347, 6, 31, "Input"]
+Cell[3428, 90, 133, 2, 31, "Input"],
+Cell[3564, 94, 1345, 22, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10099, 233, 149, 2, 79, "Section"],
+Cell[4946, 121, 96, 1, 79, "Section"],
 Cell[CellGroupData[{
-Cell[10273, 239, 198, 4, 31, "Input"],
-Cell[10474, 245, 121, 2, 31, "Output"]
+Cell[5067, 126, 335, 6, 31, "Input"],
+Cell[5405, 134, 199, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10632, 252, 699, 12, 31, "Input"],
-Cell[11334, 266, 45431, 756, 337, "Output"]
+Cell[5641, 141, 153, 2, 31, "Input"],
+Cell[5797, 145, 175, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[56802, 1027, 641, 12, 31, "Input"],
-Cell[57446, 1041, 23134, 391, 336, "Output"]
+Cell[6009, 152, 170, 3, 31, "Input"],
+Cell[6182, 157, 125, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6344, 164, 151, 2, 31, "Input"],
+Cell[6498, 168, 77, 1, 31, "Output"]
+}, Open  ]],
+Cell[6590, 172, 325, 7, 31, "Input"],
+Cell[CellGroupData[{
+Cell[6940, 183, 339, 7, 31, "Input"],
+Cell[7282, 192, 1816, 28, 92, "Output"]
+}, Open  ]],
+Cell[9113, 223, 203, 4, 31, "Input"],
+Cell[CellGroupData[{
+Cell[9341, 231, 273, 5, 31, "Input"],
+Cell[9617, 238, 1482, 23, 31, "Output"]
+}, Open  ]],
+Cell[11114, 264, 347, 6, 31, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11498, 275, 149, 2, 79, "Section"],
+Cell[CellGroupData[{
+Cell[11672, 281, 198, 4, 31, "Input"],
+Cell[11873, 287, 121, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12031, 294, 699, 12, 31, "Input"],
+Cell[12733, 308, 45431, 756, 337, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58201, 1069, 641, 12, 31, "Input"],
+Cell[58845, 1083, 23134, 391, 336, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

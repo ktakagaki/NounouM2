@@ -15,10 +15,18 @@ General::invalidOptionValue="Option argument `2` -> `1` is invalid.";
 
 $PackageDirectory = ParentDirectory[DirectoryName[FindFile["NounouM2`"]]];
 $PackageNewestFileDate = DateString[Max @@ AbsoluteTime /@ FileDate /@ FileNames[ "*",$PackageDirectory,Infinity] ];
+$GitCurrentHead = Block[{tempret},
+	SetDirectory[ ParentDirectory[DirectoryName[ FindFile["NounouM2`"] ]] ];
+	Run["git rev-parse HEAD > GitCurrentHEADHash.txt"];
+	tempret = Import["GitCurrentHEADHash.txt"];
+	ResetDirectory[];
+	tempret
+];
 
 
 Print["Welcome to NounouM2, the Mathematica interface to nounou!"];
-Print["(last updated:  "<> $PackageNewestFileDate <>")"];
+Print["      (last updated:  "<> $PackageNewestFileDate <>")"];
+Print["      (current Git HEAD:  "<> $GitCurrentHead <>")"];
 
 
 (* ::Subsection::Closed:: *)
