@@ -39,6 +39,10 @@ Begin["`Private`"] (* Begin Private Context *)
 
 
 (* ::Subsection:: *)
+(*Analyze Frame Specifications*)
+
+
+(* ::Subsection::Closed:: *)
 (*NNTracePlot*)
 
 
@@ -137,6 +141,27 @@ Print[segment];
 
 
 NNTracePlot[args___]:=Message[NNTracePlot::invalidArgs,{args}];
+
+
+(* ::Subsection:: *)
+(*NNFramePlot*)
+
+
+NNFramePlot[xData_/;NNXDataJavaObjectQ[xData], span_Span, segment_/;NumberQ[segment], opts:OptionsPattern[]]:= 
+Block[{},
+
+	(*==========Handle units and spans... must change DataRange and also frames to extract.==========*)
+
+	(*==========Data==========*)
+
+	(*==========Handle graphing options==========*)
+
+    (*==========Plot==========*)
+  Null
+];
+
+
+NNFramePlot[args___]:=Message[NNFramePlot::invalidArgs,{args}];
 
 
 (* ::Section:: *)
