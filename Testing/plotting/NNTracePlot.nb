@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     83929,       1552]
-NotebookOptionsPosition[     82019,       1479]
-NotebookOutlinePosition[     82363,       1494]
-CellTagsIndexPosition[     82320,       1491]
+NotebookDataLength[     82831,       1513]
+NotebookOptionsPosition[     81246,       1452]
+NotebookOutlinePosition[     81590,       1467]
+CellTagsIndexPosition[     81547,       1464]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,52 +36,69 @@ Cell[CellGroupData[{
 Cell[BoxData["\<\"Welcome to NounouM2, the Mathematica interface to nounou!\"\
 \>"], "Print",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
-4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
-OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
-Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
-aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
-g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
-rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
-/eVlIJqnd4X7JCC97UGbYdr1V44aJ542g2gA2PXmig==
+1:eJwVz00ow3EAxvH/JJdpSxYRaVw4LAyxppiUhWZJbCWt5SXMS4pJbNpqZWxt
+E9vBS1IzxZopmeTgQooDmy201taYbVEu3g78nsPT5/j0ZcvH2vtoFEVVk6kU
+PH/EGxcEqAiX7osL0sK3eri6c2qD7syuK0jL9aewiS5GgbSQWBuUL8DZ7woz
+VEyEruFrcJ4vIsryMl6gcU3zA7k+Zk0b0Vb63AobV+774AclCcAU9mK+mJjD
+eWuB9QnJBsw6Yx3Cz4ZNPzyfqZIMEcMPnJFh4pfraQ6KYtvXMBl2RyDjooOv
+IDrFat4I/rp9cmhhdtrhcmDwEZbIsmPw5kDzB0/UHt4osVl9NQ45tJAOru/S
+vdBbJnuH4cKa3kn0e/Yqp4jTf79CKNwy6CEruZeqRO+xkQ21iZgKSpXmsiWi
+jlNkNRF76u7sMN3gaLIQj0K68n5/XFB8GdVCR6NJNUBURIet0Hkp2If/Jv30
+eQ==
   "]],
 
-Cell[BoxData["\<\"      (last updated:  Fri 28 Feb 2014 17:09:05)\"\>"], \
+Cell[BoxData["\<\"      ( last updated:  Fri 28 Feb 2014 17:52:35 )\"\>"], \
 "Print",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
-4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
-OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
-Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
-aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
-g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
-rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
-/eVlIJqnd4X7JCC97UGbYdp1oLoLT5tBNADatebD
+1:eJwVz00ow3EAxvH/JJdpkkVE2lw4LO+xppgUIZbEVtJaXmL/IcUkNk2tjK2N
+2A5ekpopNJRMcnAhNYnNf6G1tsZsoly8Hfg9h6fP8enLUwy2dLMoiioj09BC
+JuSJin1UqIjtjYoTgjcGuLR5YoP7Ke2XkJXBxPGITk62jE+s8Ctm4MR3sQXS
+wwE3fPFPiZqI8szkZ2ha1v3AIm9SeTPRlv/UCGsW77rhByX1wTjebJaEmC54
+a4BVMekqTD3lHsDP6jUGno2XSvuJwXuBSkn8cj5OwqbIhhu+BvdDkHPeKqKJ
+uxKtUIW/Dq8Czie12eGCr+8B5snTIvBqT/cHj7Uu4QCxXns5BAWsgB6ubLE9
+0FMgf4dBfnnXCPpd2yWjxLG/3zpYt240QO7rdrwavUcmHpyORTRQprYUzBH1
+ghyrmdhZeWuHiUZH7TzxMKAv7GGi4tyL8DR01Jg1vUQ6rLRC/7V4B/4DKLX0
+sQ==
   "]],
 
-Cell[BoxData["\<\"      (current Git HEAD:  \
-ddbcb9738c5dd15276290efcd686597bae7fa38a)\"\>"], "Print",
+Cell[BoxData["\<\"      ( current Git HEAD:  \
+14298a7c9b847ec9a96ca1ece6576175b741f4e6 )\"\>"], "Print",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
-4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
-OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
-Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
-aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
-g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
-rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
-/eVlIJqnd4X7JCC97UGbYdr1V45dN542g2gA3HXm/A==
+1:eJwVz00ow3EAxvH/JJfJyCIi/blwWN6zNcVfK0IsiSlpLS+xDSkmsYlaGdZG
+bAcvSc3UaCiZ5OBCigObzUtrbY3ZRLl4O8zvOTx9jk9fWjbQ1MWiKKqMTK0Q
+uAPOMOOhAkVsV5iJ89/o4PLWiRnuJ7deQla6O4Ym2hOy2rKJ5V7ZDBz/KTZC
+xZDvCr56J4UNRGlG0gvUr0z9wiIXh99INOc/10PR0l0X/KQkHhhDz2aKiWm8
+9zpYGZGswZRT7gH8qlp3w7OxUkkf0f/AU8qJ3/anCdgQ2ryCb/79AEw4bxYq
+iLtijUCJv3aXDC5wWixw0dP7CPOkqSF4vTcVhccah6CfWKu5HIQ8lk8LV7fZ
+TugskH5Afza/cxj9DlvJCHE0+lcDazbmdZD7ZotVofdIT8PpSEgN21TGgjmi
+lpdjMhA7Km4tMH7eWr1APPRpC7vdYSb3IjgNrSKDuoeoCMpNMPGe2YH/IoTz
+7A==
+  "]],
+
+Cell[BoxData["\<\"      ( http://github.org/ktakagaki/nounoum )\"\>"], "Print",
+ CellChangeTimes->CompressedData["
+1:eJwVz00ow3EAxvH/llzIEhGRxoXDMkMsir9WhGZJTElrGWFDiklsslp52ZqJ
+7eAlKaZGMyUkBxdacWCzhTT/NWZblIu3w/yew9Pn+PTlygebFSyKosrINEqh
+N+AO0z4qIEjwhOl45mYWLm+fWqEzpc0FWZleNpfoSMppzyVWPsln4MRP8QJU
+Dvuv4NvTVIWYKMtKfoXGlelfKPBwypuI1sKXRihaulPAT0rqg2zuXLaEmMF7
+b4DVEekaTDtLPYBfNeteeD5eKu0jMvc8VT/x2/E4CcWhzSsYZZwBmHTRUqEk
+7km0QhX+OjxyaOa0bsFFX+8DLJClh+D1/nQMnmiPhQPEeq1rCPJYfj1c3Ulw
+Qzdf9gGZ3PKuEfQf20tGiWOxvzpYt2GYhalRe5wavUdGLtRFQhrYrl7gzxP1
+vDyLidhZdbsFEw22WjPx0K8v6vaG6fzLoA7aRCZND1EZ7LdA+pnehf8kRPQl
+
   "]],
 
 Cell[BoxData["\<\"<<Set JLink` java stack size to 3072Mb>>\"\>"], "Print",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGAwAeK6HMvrj6+8crzB8NiI++orR7ZHl7pA9LTle2aA6E3C
-4adANKPUdSZFIL2BTz5SCUjb3EvqBNE1P40nguicogdnQfTLew3WfkA6QUbw
-OYjum9P0C0QbXeW38AfSM/Sf+YBol6nXUkH0J4aIGyCaSbFbNgBIS+q+8wbR
-Dq8j5oFosX0im0H0d6f510H0oSrTiCwg/eiWbm42kP6x4U4tiPZ7sfgsiH7z
-aNNjEM13PMQ6B0ivC6i3zAXZF3M1CURP4g9bBqIn38i8DaI1E8RfgOhzG5v+
-g+hd9Tst84C0V/2pAhCty/igDUTPXcl9BURfMUh4D6IfKVmklIL8v3ONSRmQ
-rvj/2wNEeyzs7QLRIm/WsJSD/LujTxFEN79+UQeiI8snGvQA6TZd5ekTgHSc
-/eVlIJqnd4X7JCC97UGbYdr1V44pgc+bQTQA16DmUQ==
+1:eJwVz00ow3EAxvH/llxoiIhI/7lwWGaINcVYWYglMSWtZYT/kGISm7ZaGVtD
+Xg5ekhpqxJRMcnAhxYHNFtLawmyLcvF2mN9zePocn760sr9RxaIoqoRMywg9
+AVdI7KUCgjh3SBzrvzHBhc2TJehIbrmErAwPmybucbJbucSyJ+UkHPspnIHM
+oO8Kvj1NiOqJisykV2hZ1v9CgTuhtIG4lP9SByXzdyr4Scm9kE1PZcmI6bz3
+WlgRlq/C1NOUA/hVueaBZ6PF8h6i/56n7iV+7z2Ow/rgxhWM+B0ByDlvEjHE
+XZlOqMZfm1sJZxOabXDO2/0A8xRpQXi9r4/CY51T2Ees0V0OQB7LZ4Qr23Eu
+6OIrPqCfW9oxhH6nvWiYOBL9k0LputkEUyL2GA16jyw0NISDWtiqmeFPE428
+nEUrsb381gbjzVvVs8RDn7Gg0xMS5148G+CWxKrtIjLPvYtQkVi1A/8BH5Hz
+dQ==
   "]]
 }, Open  ]]
 }, Open  ]],
@@ -99,7 +116,7 @@ Cell[BoxData[
     RowBox[{
     "com", ".", "wolfram", ".", "jlink", ".", "ui", ".", "ConsoleWindow"}], 
     "]"}], "\[RightGuillemet]"}],
-  JLink`Objects`vm1`JavaObject7981268352368641]], "Output",
+  JLink`Objects`vm1`JavaObject27859837723344897]], "Output",
  CellChangeTimes->{{3.6014050410638*^9, 3.601405067147292*^9}, 
    3.601405552331043*^9, 3.6014944970254965`*^9, 3.601495866354818*^9, 
    3.6014960213826847`*^9, 3.6014965137528467`*^9, 3.6014966810084133`*^9, 
@@ -114,7 +131,8 @@ Cell[BoxData[
    3.6015746917353716`*^9, 3.601576359386756*^9, 3.601576521929053*^9, 
    3.60157704656606*^9, 3.6015780235179386`*^9, 3.601578254396144*^9, 
    3.6015790013518677`*^9, 3.6016213838130054`*^9, 3.6016303953274345`*^9, 
-   3.6016305229237328`*^9, 3.601633855272332*^9}]
+   3.6016305229237328`*^9, 3.601633855272332*^9, 3.602595007636999*^9, 
+   3.6025951802938747`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -126,58 +144,19 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"testDataFileDirectory", " ", "=", " ", 
-  RowBox[{"ParentDirectory", "[", 
-   RowBox[{"NotebookDirectory", "[", "]"}], "]"}]}]], "Input",
+  RowBox[{
+   RowBox[{"ParentDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "<>", 
+   "\"\<\\\\_testFiles\\\\Neuralynx\>\""}]}]], "Input",
  CellChangeTimes->{{3.6013572155643377`*^9, 3.601357235971505*^9}, {
   3.6013576068407173`*^9, 3.6013576109839544`*^9}, {3.6025914661123734`*^9, 
-  3.6025914841364045`*^9}}],
+  3.6025914841364045`*^9}, {3.6025950335664825`*^9, 3.602595052391559*^9}}],
 
-Cell[BoxData["\<\"C:\\\\Users\\\\Kenta\\\\AppData\\\\Roaming\\\\Mathematica\\\
-\\Applications\\\\NounouM2\\\\Testing\"\>"], "Output",
- CellChangeTimes->{{3.602591469403562*^9, 3.602591484511426*^9}}]
+Cell[BoxData["\<\"V:\\\\docs\\\\bb\\\\NounouM2\\\\NounouM2\\\\Testing\\\\_\
+testFiles\\\\Neuralynx\"\>"], "Output",
+ CellChangeTimes->{{3.602591469403562*^9, 3.602591484511426*^9}, 
+   3.6025950111391993`*^9, 3.602595055482736*^9, 3.6025951803388777`*^9}]
 }, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"SetDirectory", "[", "testDataFileDirectory", "]"}]], "Input",
- CellChangeTimes->{{3.6025914899997396`*^9, 3.602591496961138*^9}}],
-
-Cell[BoxData["\<\"C:\\\\Users\\\\Kenta\\\\AppData\\\\Roaming\\\\Mathematica\\\
-\\Applications\\\\NounouM2\\\\Testing\"\>"], "Output",
- CellChangeTimes->{3.602591497394163*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Run", "[", "\"\<git rev-parse HEAD | gitHeadHash.txt\>\"", 
-  "]"}]], "Input",
- CellChangeTimes->{{3.6025914993062725`*^9, 3.602591584322135*^9}}],
-
-Cell[BoxData["255"], "Output",
- CellChangeTimes->{
-  3.602591514794158*^9, {3.6025915556434946`*^9, 3.6025915847621603`*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Import", "[", "\"\<gitHeadHash.txt\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.6025915564975433`*^9, 3.6025915644199963`*^9}}],
-
-Cell[BoxData["\<\"\"\>"], "Output",
- CellChangeTimes->{3.602591564894024*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"(*", " ", 
-  RowBox[{"FileNames", "[", 
-   RowBox[{"testDataFileDirectory", "<>", "\"\<\\\\*\>\""}], "]"}], " ", 
-  "*)"}]], "Input",
- CellChangeTimes->{
-  3.6013572069888473`*^9, {3.6013572510583677`*^9, 3.601357268514366*^9}, 
-   3.601357615185195*^9, {3.60135842877973*^9, 3.6013584305778327`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -192,14 +171,14 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\\
-2013-12-02_17-07-31\\\\Tet4a.ncs\"\>", 
-   ",", "\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-\
-12-02_17-07-31\\\\Tet4b.ncs\"\>", 
-   ",", "\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-\
-12-02_17-07-31\\\\Tet4c.ncs\"\>", 
-   ",", "\<\"V:\\\\docs\\\\k.VSDdata\\\\project.SPP\\\\Nlx\\\\SPP010\\\\2013-\
-12-02_17-07-31\\\\Tet4d.ncs\"\>"}], "}"}]], "Output",
+  RowBox[{"\<\"V:\\\\docs\\\\bb\\\\NounouM2\\\\NounouM2\\\\Testing\\\\_\
+testFiles\\\\Neuralynx\\\\Tet4a.ncs\"\>", 
+   ",", "\<\"V:\\\\docs\\\\bb\\\\NounouM2\\\\NounouM2\\\\Testing\\\\_\
+testFiles\\\\Neuralynx\\\\Tet4b.ncs\"\>", 
+   ",", "\<\"V:\\\\docs\\\\bb\\\\NounouM2\\\\NounouM2\\\\Testing\\\\_\
+testFiles\\\\Neuralynx\\\\Tet4c.ncs\"\>", 
+   ",", "\<\"V:\\\\docs\\\\bb\\\\NounouM2\\\\NounouM2\\\\Testing\\\\_\
+testFiles\\\\Neuralynx\\\\Tet4d.ncs\"\>"}], "}"}]], "Output",
  CellChangeTimes->{
   3.60135755372968*^9, {3.6013579161214075`*^9, 3.6013579213557067`*^9}, 
    3.6013580263547125`*^9, 3.601358424257471*^9, 3.601358478471572*^9, 
@@ -218,48 +197,8 @@ Cell[BoxData[
    3.601576364095025*^9, 3.6015765220200577`*^9, 3.6015770098269587`*^9, 
    3.601577049936253*^9, {3.6015780094531345`*^9, 3.601578027398161*^9}, 
    3.601578255068183*^9, 3.601579003647999*^9, 3.601621386993188*^9, 
-   3.6016305262249217`*^9, 3.6016338564654007`*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{"Methods", "[", "NN", "]"}], "*)"}]], "Input",
- CellChangeTimes->{{3.601358545480405*^9, 3.6013585482575636`*^9}, {
-  3.601405011049083*^9, 3.601405012272153*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"$NNReader", " ", "=", " ", 
-  RowBox[{"NN`newReader", "[", "]"}]}]], "Input",
- CellChangeTimes->{{3.6013576332662287`*^9, 3.601357633383236*^9}, {
-  3.601357927062033*^9, 3.6013579537975626`*^9}, {3.6015705457922373`*^9, 
-  3.6015705459502463`*^9}}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\[LeftGuillemet]", 
-   RowBox[{"JavaObject", "[", 
-    RowBox[{"nounou", ".", "DataReader"}], "]"}], "\[RightGuillemet]"}],
-  JLink`Objects`vm1`JavaObject24930742958030849]], "Output",
- CellChangeTimes->{
-  3.601357633653251*^9, 3.6013579235828342`*^9, 3.6013579581498113`*^9, 
-   3.6013580317570214`*^9, 3.6013584338760214`*^9, 3.6014018939177933`*^9, 
-   3.601404623766932*^9, 3.6014050138662443`*^9, 3.601405071641549*^9, 
-   3.601405557162319*^9, 3.601494506336029*^9, 3.6014958708940773`*^9, 
-   3.601496026939003*^9, 3.60149652151029*^9, 3.6014966871267633`*^9, 
-   3.60149688393902*^9, 3.6014978013414927`*^9, 3.60149835341807*^9, 
-   3.601498724880316*^9, 3.601499384851064*^9, 3.601499548966451*^9, 
-   3.601499843042271*^9, 3.6015520730066547`*^9, 3.601554285886224*^9, 
-   3.601554419185848*^9, 3.6015550570633326`*^9, 3.601555233460422*^9, 
-   3.6015559372886786`*^9, 3.601557969285902*^9, 3.6015583034750166`*^9, 
-   3.6015588376095676`*^9, 3.60155926319791*^9, 3.6015593648637247`*^9, 
-   3.601559552680467*^9, 3.601560018031084*^9, 3.6015604634575605`*^9, 
-   3.6015606344103384`*^9, 3.601561254958832*^9, 3.6015614748624096`*^9, 
-   3.6015747015239315`*^9, 3.601576366725176*^9, 3.601576523298131*^9, {
-   3.6015770109030204`*^9, 3.601577051791359*^9}, {3.601578009504137*^9, 
-   3.601578028526225*^9}, 3.601578256126243*^9, 3.601579005711117*^9, 
-   3.601621388526275*^9, 3.6016305279190187`*^9, 3.6016338584545145`*^9}]
+   3.6016305262249217`*^9, 3.6016338564654007`*^9, 3.602595057786868*^9, 
+   3.602595185168154*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -268,7 +207,31 @@ Cell[BoxData[
  CellChangeTimes->{{3.6013572943418436`*^9, 3.6013573034493647`*^9}, {
    3.601357457129154*^9, 3.601357489776022*^9}, {3.6013575264661207`*^9, 
    3.601357567576472*^9}, {3.6013579649582005`*^9, 3.6013579753007927`*^9}, 
-   3.6015705511285424`*^9}]
+   3.6015705511285424`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$NNReader", "@", 
+  RowBox[{"toStringChain", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6025952012190714`*^9, 3.6025952074064255`*^9}}],
+
+Cell[BoxData["\<\"DataReader LOADED DATA \
+SUMMARY\\n================================\\nDataReader( data ch:4, dataAux \
+ch:0, mask: XMask: 0 _masks, events: 0)\\n\\n     [header  ] XHeaderNull\\n   \
+  [dataORI ] XDataFilterHolder: XData: 4 ch, 3 seg, lengths=Vector(3339264, \
+123392, 6754816), fs=32000.0)     \\n          \\\\ XDataFilterDecimate: \
+factor=16     \\n               \\\\ XDataFilterBuffer: \
+bufferPageLength=16384, garbageQueBound=1024     \\n                    \\\\ \
+XDataFilterStatistics: \\n                    \\\\ XDataFilterFIR: kernel \
+null (off)     \\n                         \\\\ XDataFilterRMS: \
+halfWindow=100\\n                    \\\\ XDataFilterMinMaxAbs: \
+halfWindow=100\\n                    \\\\ XDataFilterFIR: kernel null \
+(off)\\n     [dataAux ] XDataFilterHolder: XDataNull()\\n     [mask    ] \
+XMask: 0 _masks\\n     [events  ] XEventsNull\\n     [spikes  ] XSpikesNull\"\
+\>"], "Output",
+ CellChangeTimes->{3.602595207798448*^9}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -285,9 +248,19 @@ Cell[BoxData[
    RowBox[{"0", ",", "0"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.6016301460991797`*^9, 3.6016301530105753`*^9}}],
 
-Cell[BoxData["0.`"], "Output",
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Java", "::", "nometh"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"No method named \[NoBreak]\\!\\(\\\"dataFrameSegmentToMs\\\
+\"\\)\[NoBreak] defined in class \[NoBreak]\\!\\(\\\"nounou.DataReader\\\"\\)\
+\[NoBreak].\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.602595236458087*^9}],
+
+Cell[BoxData["$Failed"], "Output",
  CellChangeTimes->{3.601630153305592*^9, 3.601630542261839*^9, 
-  3.6016338729803452`*^9}]
+  3.6016338729803452`*^9, 3.6025952364590874`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1498,59 +1471,47 @@ Cell[579, 22, 213, 3, 90, "Title"],
 Cell[CellGroupData[{
 Cell[817, 29, 119, 2, 31, "Input"],
 Cell[CellGroupData[{
-Cell[961, 35, 608, 11, 23, "Print"],
-Cell[1572, 48, 594, 11, 23, "Print"],
-Cell[2169, 61, 618, 11, 23, "Print"],
-Cell[2790, 74, 589, 10, 23, "Print"]
+Cell[961, 35, 629, 12, 23, "Print"],
+Cell[1593, 49, 621, 12, 23, "Print"],
+Cell[2217, 63, 641, 12, 23, "Print"],
+Cell[2861, 77, 611, 11, 23, "Print"],
+Cell[3475, 90, 610, 11, 23, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3428, 90, 133, 2, 31, "Input"],
-Cell[3564, 94, 1345, 22, 31, "Output"]
+Cell[4134, 107, 133, 2, 31, "Input"],
+Cell[4270, 111, 1396, 23, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4946, 121, 96, 1, 79, "Section"],
+Cell[5703, 139, 96, 1, 79, "Section"],
 Cell[CellGroupData[{
-Cell[5067, 126, 335, 6, 31, "Input"],
-Cell[5405, 134, 199, 2, 31, "Output"]
+Cell[5824, 144, 447, 8, 31, "Input"],
+Cell[6274, 154, 255, 3, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5641, 141, 153, 2, 31, "Input"],
-Cell[5797, 145, 175, 2, 31, "Output"]
+Cell[6566, 162, 339, 7, 31, "Input"],
+Cell[6908, 171, 1864, 29, 92, "Output"]
+}, Open  ]],
+Cell[8787, 203, 347, 6, 31, "Input"],
+Cell[CellGroupData[{
+Cell[9159, 213, 162, 3, 31, "Input"],
+Cell[9324, 218, 982, 14, 372, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6009, 152, 170, 3, 31, "Input"],
-Cell[6182, 157, 125, 2, 31, "Output"]
+Cell[10355, 238, 149, 2, 79, "Section"],
+Cell[CellGroupData[{
+Cell[10529, 244, 198, 4, 31, "Input"],
+Cell[10730, 250, 339, 8, 21, "Message"],
+Cell[11072, 260, 149, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6344, 164, 151, 2, 31, "Input"],
-Cell[6498, 168, 77, 1, 31, "Output"]
-}, Open  ]],
-Cell[6590, 172, 325, 7, 31, "Input"],
-Cell[CellGroupData[{
-Cell[6940, 183, 339, 7, 31, "Input"],
-Cell[7282, 192, 1816, 28, 92, "Output"]
-}, Open  ]],
-Cell[9113, 223, 203, 4, 31, "Input"],
-Cell[CellGroupData[{
-Cell[9341, 231, 273, 5, 31, "Input"],
-Cell[9617, 238, 1482, 23, 31, "Output"]
-}, Open  ]],
-Cell[11114, 264, 347, 6, 31, "Input"]
+Cell[11258, 267, 699, 12, 31, "Input"],
+Cell[11960, 281, 45431, 756, 337, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11498, 275, 149, 2, 79, "Section"],
-Cell[CellGroupData[{
-Cell[11672, 281, 198, 4, 31, "Input"],
-Cell[11873, 287, 121, 2, 31, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[12031, 294, 699, 12, 31, "Input"],
-Cell[12733, 308, 45431, 756, 337, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[58201, 1069, 641, 12, 31, "Input"],
-Cell[58845, 1083, 23134, 391, 336, "Output"]
+Cell[57428, 1042, 641, 12, 31, "Input"],
+Cell[58072, 1056, 23134, 391, 336, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

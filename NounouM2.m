@@ -25,8 +25,9 @@ $GitCurrentHead = Block[{tempret},
 
 
 Print["Welcome to NounouM2, the Mathematica interface to nounou!"];
-Print["      (last updated:  "<> $PackageNewestFileDate <>")"];
-Print["      (current Git HEAD:  "<> $GitCurrentHead <>")"];
+Print["      ( last updated:  "<> $PackageNewestFileDate <>" )"];
+Print["      ( current Git HEAD:  "<> $GitCurrentHead <>" )"];
+Print["      ( http://github.org/ktakagaki/nounoum )"];
 
 
 (* ::Subsection::Closed:: *)

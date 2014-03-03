@@ -55,7 +55,7 @@ NounouM2`IncreaseJavaStack[stackSize_Integer]:=
 	]; (*Module for KKMInstallJava*)
 
 
-NounouM2`IncreaseJavaStack[3072];
+NounouM2`IncreaseJavaStack[6144];
 
 
 (*Convenience object for static methods*)
