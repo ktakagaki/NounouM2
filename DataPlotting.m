@@ -42,7 +42,7 @@ Begin["`Private`"] (* Begin Private Context *)
 (*Analyze Frame Specifications*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*NNTracePlot*)
 
 
@@ -95,7 +95,7 @@ Block[{traces, tracesWidth,
 	grOptDataRange = {span[[1]], span[[2]]};
 Print[segment];
 	(*==========Data==========*)
-	traces = xData@readTraceAbsA[#, NN`fr@@frameSpan, segment]& /@ channels;
+	traces = xData@readTraceAbsA[#, NN`frameRange@@frameSpan, segment]& /@ channels;
     tracesWidth = Max[traces]-Min[traces];
 
 	(*==========Handle graphing options==========*)
