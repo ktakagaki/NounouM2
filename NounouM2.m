@@ -30,15 +30,22 @@ Print["      ( current Git HEAD:  "<> $GitCurrentHead <>" )"];
 Print["      ( http://github.org/ktakagaki/nounoum )"];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Common Option Declarations*)
 
 
-NNStackAxes::usage=" ";
-NNAxes::usage=" ";
-NNBaselineCorrection::usage="";
-NNUnit::usage="\"mS\" (default) or \"frames\"";
+NNStackLists::usage=" ";
+(*NNAxes::usage=" ";
+NNBaselineCorrection::usage="";*)
+
+
+(* ::Subsubsection:: *)
+(*TracePlot*)
+
+
+NNTimeUnitMS::usage="True (plot in ms) or False.";
 NNMasking::usage=" ";
+NNAbsoluteValue::usage="Whether to plot traces in an absolute unit";
 
 
 (* ::Subsection::Closed:: *)
@@ -93,7 +100,11 @@ NNExtractRules::usage=
 
 
 NNDataReaderJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.DataReader";
+
+NNFrameRangeJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.FrameRange";
+
 NNXDataJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XData";
+NNXMaskJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XMask";
 NNXLayoutJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XLayout";
 NNXLayoutNullJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XLayoutNull";
 NNXLayoutSquareJavaObjectQ::usage="Checks whether something is a Java object and an instance of nounou.data.XLayoutSquare";
@@ -265,8 +276,16 @@ NNDataReaderJavaObjectQ[
 NNDataReaderJavaObjectQ[args___]:= False ;
 
 
+NNFrameRangeJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.FrameRange"])] := True;
+NNFrameRangeJavaObjectQ[args___] := False;
+
+
 NNXDataJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.data.XData"])]:= True;
 NNXDataJavaObjectQ[args___]:= False;
+
+
+NNXMaskJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.data.XMask"])]:= True;
+NNXMaskJavaObjectQ[args___]:= False;
 
 
 NNXLayoutJavaObjectQ[x_/;(JavaObjectQ[x] && InstanceOf[x, "nounou.data.XLayout"])]:= True;

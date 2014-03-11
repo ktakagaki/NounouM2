@@ -10,101 +10,24 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      7316,        279]
-NotebookOptionsPosition[      5020,        195]
-NotebookOutlinePosition[      5438,        211]
-CellTagsIndexPosition[      5395,        208]
+NotebookDataLength[      4783,        164]
+NotebookOptionsPosition[      2810,        104]
+NotebookOutlinePosition[      3978,        134]
+CellTagsIndexPosition[      3935,        131]
+WindowTitle->Installing NounouM2 - Wolfram Mathematica
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
 Cell[TextData[{
- "New in: ",
- Cell["1.999", "HistoryData",
-  CellTags->"New"],
- " | Modified in: ",
- Cell[" ", "HistoryData",
-  CellTags->"Modified"],
- " | Obsolete in: ",
- Cell[" ", "HistoryData",
-  CellTags->"Obsolete"],
- " | Excised in: ",
- Cell[" ", "HistoryData",
-  CellTags->"Excised"]
-}], "History",
- CellID->1247902091],
-
-Cell[CellGroupData[{
-
-Cell["Categorization", "CategorizationSection",
- CellID->1122911449],
-
-Cell["Guide", "Categorization",
- CellLabel->"Entity Type",
- CellID->686433507],
-
-Cell["NounouM2", "Categorization",
- CellLabel->"Paclet Name",
- CellID->605800465],
-
-Cell["NounouM2`", "Categorization",
- CellLabel->"Context",
- CellID->468444828],
-
-Cell["NounouM2/guide/Installing NounouM2", "Categorization",
- CellLabel->"URI"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell["Keywords", "KeywordsSection",
- CellID->1427428552],
-
-Cell["XXXX", "Keywords",
- CellID->1251852827]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell["Details", "DetailsSection",
- CellID->307771771],
-
-Cell["XXXX", "Details",
- CellLabel->"Lead",
- CellID->795394057],
-
-Cell["XXXX", "Details",
- CellLabel->"Developers",
- CellID->350963985],
-
-Cell["XXXX", "Details",
- CellLabel->"Authors",
- CellID->802101],
-
-Cell["XXXX", "Details",
- CellLabel->"Feature Name",
- CellID->509823116],
-
-Cell["XXXX", "Details",
- CellLabel->"QA",
- CellID->199884516],
-
-Cell["XXXX", "Details",
- CellLabel->"DA",
- CellID->463951815],
-
-Cell["XXXX", "Details",
- CellLabel->"Docs",
- CellID->8237523],
-
-Cell["XXXX", "Details",
- CellLabel->"Features Page Notes",
- CellID->813936640],
-
-Cell["XXXX", "Details",
- CellLabel->"Comments",
- CellID->240026365]
-}, Closed]],
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:NounouM2/guide/NounouM2"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
 
 Cell[CellGroupData[{
 
@@ -118,21 +41,13 @@ NounouM2/Kernel, and NounouM2/NounouM2.m) to an accesible ",
   FontSlant->"Italic"],
  " Application directory."
 }], "GuideAbstract",
- CellChangeTimes->{{3.6012763654459753`*^9, 3.6012763913634577`*^9}, {
-   3.6012764340198975`*^9, 3.6012765399149547`*^9}, {3.6012765755219913`*^9, 
-   3.601276581194316*^9}, 3.601277034575248*^9},
  CellID->2001916300],
 
-Cell["\<\
-The best directory will usually be, for a Windows system,\
-\>", "GuideAbstract",
- CellChangeTimes->{{3.6012763654459753`*^9, 3.6012763913634577`*^9}, {
-   3.6012764340198975`*^9, 3.6012765399149547`*^9}, {3.6012765755219913`*^9, 
-   3.601276581194316*^9}, 3.601277034575248*^9},
+Cell["The best directory will usually be, for a Windows system,", \
+"GuideAbstract",
  CellID->168001377],
 
 Cell[BoxData["$UserAddOnsDirectory"], "Input",
- CellChangeTimes->{{3.6012765215159025`*^9, 3.6012765255211315`*^9}},
  CellLabel->"In[8]:=",
  CellID->151947100],
 
@@ -141,19 +56,16 @@ Cell[OutputFormData["\<\
 \>", "\<\
 C:\\Users\\XXXX\\AppData\\Roaming\\Mathematica\
 \>"], "Input",
- CellChangeTimes->{{3.6012765492674894`*^9, 3.60127656273026*^9}},
  CellLabel->"Out[8]=",
  CellID->484223572],
 
 Cell["After this, the package can be invoked with", "GuideAbstract",
- CellChangeTimes->{{3.601276587224661*^9, 3.601276593490019*^9}},
  CellID->550845695],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"<<", "NounouM2`"}]], "Input",
- CellChangeTimes->{{3.601276597725261*^9, 3.601276600971447*^9}},
  CellLabel->"In[9]:=",
  CellID->284934514],
 
@@ -161,17 +73,14 @@ Cell[CellGroupData[{
 
 Cell[BoxData["\<\"Welcome to NounouM2, the Mathematica interface to nounou!\"\
 \>"], "Print",
- CellChangeTimes->{3.6012766017944937`*^9},
  CellLabel->"During evaluation of In[9]:=",
  CellID->419964519],
 
 Cell[BoxData["\<\"(last updated:  Thu 13 Feb 2014 11:32:30)\"\>"], "Print",
- CellChangeTimes->{3.6012766017944937`*^9},
  CellLabel->"During evaluation of In[9]:=",
  CellID->44621972],
 
 Cell[BoxData["\<\"<<Set JLink` java stack size to 3072Mb>>\"\>"], "Print",
- CellChangeTimes->{3.6012766018274956`*^9},
  CellLabel->"During evaluation of In[9]:=",
  CellID->15362482]
 }, Open  ]]
@@ -181,7 +90,6 @@ Cell["\<\
 Note that the stack size for the JVM running the Java package nounou.jar is \
 set by default to 3072Mb. This is done automatically by NounouM2. \
 \>", "GuideAbstract",
- CellChangeTimes->{{3.6012768912690506`*^9, 3.601277027422838*^9}},
  CellID->283995800],
 
 Cell["\<\
@@ -189,14 +97,29 @@ Smaller stack sizes are possible, if you only use file adapters which read \
 directly from harddisk. Approximately 3GB is usually a good compromise for \
 most modern systems (as of 2014).\
 \>", "GuideAbstract",
- CellChangeTimes->{{3.6012768912690506`*^9, 3.601277027422838*^9}},
  CellID->71100653]
-}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
 },
-WindowSize->{700, 770},
-WindowMargins->{{4, Automatic}, {Automatic, 0}},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Installing NounouM2 - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2014, 3, 11, 14, 59, 11.6047091}", "context" -> "NounouM2`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Nounou M2 Guide", 
+    "language" -> "en", "paclet" -> "NounouM2", "status" -> "None", "summary" -> 
+    "Simply copy the archive NounouM2 (which includes NounouM2/Java, \
+NounouM2/Kernel, and NounouM2/NounouM2.m) to an accesible Mathematica \
+Application directory.", "synonyms" -> {}, "title" -> "Installing NounouM2", 
+    "type" -> "Guide", "uri" -> "NounouM2/guide/Installing NounouM2"}, 
+  "LinkTrails" -> "", "SearchTextTranslated" -> ""},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
-StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStyles.nb", 
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
   CharacterEncoding -> "ShiftJIS"]
 ]
 (* End of Notebook Content *)
@@ -210,79 +133,42 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 327, 14, 22, "History",
- CellID->1247902091],
+Cell[612, 21, 75, 1, 70, "GuideColorBar"],
+Cell[690, 24, 182, 5, 70, "LinkTrail"],
 Cell[CellGroupData[{
-Cell[909, 38, 68, 1, 27, "CategorizationSection",
- CellID->1122911449],
-Cell[980, 41, 78, 2, 70, "Categorization",
- CellID->686433507],
-Cell[1061, 45, 81, 2, 70, "Categorization",
- CellID->605800465],
-Cell[1145, 49, 78, 2, 70, "Categorization",
- CellID->468444828],
-Cell[1226, 53, 79, 1, 70, "Categorization"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1342, 59, 56, 1, 17, "KeywordsSection",
- CellID->1427428552],
-Cell[1401, 62, 45, 1, 70, "Keywords",
- CellID->1251852827]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1483, 68, 53, 1, 17, "DetailsSection",
- CellID->307771771],
-Cell[1539, 71, 63, 2, 70, "Details",
- CellID->795394057],
-Cell[1605, 75, 69, 2, 70, "Details",
- CellID->350963985],
-Cell[1677, 79, 63, 2, 70, "Details",
- CellID->802101],
-Cell[1743, 83, 71, 2, 70, "Details",
- CellID->509823116],
-Cell[1817, 87, 61, 2, 70, "Details",
- CellID->199884516],
-Cell[1881, 91, 61, 2, 70, "Details",
- CellID->463951815],
-Cell[1945, 95, 61, 2, 70, "Details",
- CellID->8237523],
-Cell[2009, 99, 78, 2, 70, "Details",
- CellID->813936640],
-Cell[2090, 103, 67, 2, 70, "Details",
- CellID->240026365]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[2194, 110, 61, 1, 76, "GuideTitle",
+Cell[897, 33, 61, 1, 70, "GuideTitle",
  CellID->942062912],
-Cell[2258, 113, 460, 10, 39, "GuideAbstract",
+Cell[961, 36, 262, 7, 70, "GuideAbstract",
  CellID->2001916300],
-Cell[2721, 125, 308, 6, 36, "GuideAbstract",
+Cell[1226, 45, 104, 2, 70, "GuideAbstract",
  CellID->168001377],
-Cell[3032, 133, 159, 3, 27, "Input",
+Cell[1333, 49, 89, 2, 70, "Input",
  CellID->151947100],
-Cell[3194, 138, 269, 7, 33, "Input",
+Cell[1425, 53, 202, 6, 70, "Input",
  CellID->484223572],
-Cell[3466, 147, 154, 2, 25, "GuideAbstract",
+Cell[1630, 61, 88, 1, 70, "GuideAbstract",
  CellID->550845695],
 Cell[CellGroupData[{
-Cell[3645, 153, 162, 4, 27, "Input",
+Cell[1743, 66, 96, 3, 70, "Input",
  CellID->284934514],
 Cell[CellGroupData[{
-Cell[3832, 161, 201, 4, 21, "Print",
+Cell[1864, 73, 157, 3, 70, "Print",
  CellID->419964519],
-Cell[4036, 167, 182, 3, 21, "Print",
+Cell[2024, 78, 138, 2, 70, "Print",
  CellID->44621972],
-Cell[4221, 172, 181, 3, 21, "Print",
+Cell[2165, 82, 137, 2, 70, "Print",
  CellID->15362482]
 }, Open  ]]
 }, Open  ]],
-Cell[4429, 179, 265, 5, 39, "GuideAbstract",
+Cell[2329, 88, 197, 4, 70, "GuideAbstract",
  CellID->283995800],
-Cell[4697, 186, 307, 6, 64, "GuideAbstract",
+Cell[2529, 94, 239, 5, 70, "GuideAbstract",
  CellID->71100653]
-}, Open  ]]
+}, Open  ]],
+Cell[2783, 102, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
 
 (* End of internal cache information *)
+

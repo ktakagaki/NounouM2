@@ -8,7 +8,7 @@ BeginPackage["NounouM2`Plotting`", { "NounouM2`"}]
 (*Declarations*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsection:: *)
 (*NNListLinePlotMean*)
 
 
@@ -28,15 +28,20 @@ NNErrorPlotShaded::usage= "Whether to shade error ranges in NNListLinePlotMean."
 NNErrorPlotFillingStyle::usage= "Shading style for error shading in NNErrorPlot. (\"StandardError\" or \"StandardDeviation\")";
 
 
-Options[NNListLinePlotMean] =
-NNJoinOptionLists[
+NNListLinePlotMean$UniqueOptions = NNJoinOptionLists[
 	{
 	NNTracePlot->True,
 	NNMeanPlot->True, NNMeanPlotStyle->{Opacity[0.5, Black]}, 
-	NNErrorPlot->True, NNErrorType->"StandardError", NNErrorPlotStyle->{Opacity[0.25,Blue]},
-	NNErrorPlotShaded->True, NNErrorPlotFillingStyle->{Opacity[0.25,Blue]} 
+	NNErrorPlot->True, NNErrorType->"StandardError", NNErrorPlotStyle->Opacity[0.25,Blue],
+	NNErrorPlotShaded->True, NNErrorPlotFillingStyle->Opacity[0.25,Blue] 
 	},
-	{PlotStyle->Opacity[0.05,Black](*, AspectRatio->1/5, PlotRange->All*)}
+	{PlotStyle->Opacity[0.05,Black]}
+];
+ 
+Options[NNListLinePlotMean] =
+NNJoinOptionLists[
+	NNListLinePlotMean$UniqueOptions,
+	Options[ListLinePlot]
 ];
 
 
@@ -85,7 +90,7 @@ Begin["`Private`"] (* Begin Private Context *)
 NNListLinePlotMean[traces_/;Length[Dimensions[traces]]==2, opts:OptionsPattern[]]:=
 Module[{(*tempDataS, *)tempMean, tempError,
 		opMeanPlot, opErrorPlot, opErrorPlotShaded, opErrorType,
-		grMain, grMean, grError},
+		grMain, grMean, grError, grErrorShading},
 
 	opMeanPlot=OptionValue[NNMeanPlot];
 	opErrorPlot=OptionValue[NNErrorPlot];
@@ -114,7 +119,7 @@ Module[{(*tempDataS, *)tempMean, tempError,
 					Message[ NNListLinePlotMean::invalidOptionValue, {"NNErrorType", ToString[opErrorType]} ]
 			]
 		];
-		grError=If[opErrorPlotShaded,
+		grErrorShading=If[opErrorPlotShaded,
 			ListLinePlot[{tempMean-tempError, tempMean+tempError}, 
 				Sequence@@NNJoinOptionLists[ListLinePlot,
 					{PlotStyle->None, Filling->{1->{2}}, FillingStyle->OptionValue[NNErrorPlotFillingStyle]},
@@ -123,15 +128,14 @@ Module[{(*tempDataS, *)tempMean, tempError,
 			],
 			Graphics[]
 		];
-		If[opErrorPlot,
-			PrependTo[grError,
-				ListLinePlot[{tempMean-tempError, tempMean+tempError}, 
-					Sequence@@NNJoinOptionLists[ListLinePlot,
-						{PlotStyle->OptionValue[NNErrorPlotStyle]},
-						{opts}
-						]
-				]
-			]
+		grError=If[opErrorPlot,
+			ListLinePlot[{tempMean-tempError, tempMean+tempError}, 
+				Sequence@@NNJoinOptionLists[ListLinePlot,
+					{PlotStyle->OptionValue[NNErrorPlotStyle]},
+					{opts}
+					]
+			],
+			Graphics[]
 		]
 	];(*If[(opMeanPlot || opErrorPlot ) && Length[traces]>=2 *)
 
@@ -145,7 +149,7 @@ Module[{(*tempDataS, *)tempMean, tempError,
 
 
 	(*==========Combine plots==========*)
-	Show[grMain, grError, grMean]
+	Show[grMain, grErrorShading, grError,  grMean]
 ];
 
 
@@ -157,20 +161,20 @@ NNListLinePlotMean[args___] := Message[NNListLinePlotMean::invalidArgs, {args}];
 
 
 NNStackLists[traces_ /; MatrixQ[traces], stackAmplitude_, opts:OptionsPattern[]] :=
-  Block[{tempTraces, addFactor, opNNStackListsBaselineCorrection},
+  Block[{tempTraces, addFactor, opNNBaselineCorrection},
 	
-	opNNStackListsBaselineCorrection = OptionValue[NNBaselineCorrection];
-	If[ opNNStackListsBaselineCorrection === Mean,
-		tempTraces = traces - Mean /@ traces,
-	If[ opNNStackListsBaselineCorrection === None,
+	opNNBaselineCorrection = OptionValue[NNBaselineCorrection];
+	If[ opNNBaselineCorrection === None,
 		tempTraces = traces,
-	If[ Head[opNNStackListsBaselineCorrection] === Span,
-		tempTraces = traces - (Mean[#[[ opNNStackListsBaselineCorrection ]]]& /@ traces),
-		Message[ NNStackLists::invalidOptionValue, NNBaselineCorrection, opNNStackListsBaselineCorrection]
+	If[ opNNBaselineCorrection === Mean,
+		tempTraces = traces - Mean /@ traces,
+	If[ Head[opNNBaselineCorrection] === Span,
+		tempTraces = traces - (Mean[#[[ opNNBaselineCorrection ]]]& /@ traces),
+		Message[ NNStackLists::invalidOptionValue, NNBaselineCorrection, opNNBaselineCorrection]
 	]]];
 
    (*tempData = traces - (Mean /@ traces);*)
-   addFactor = (Range[Length[tempTraces]]-1)*stackAmplitude;
+   addFactor = (Range[Length[tempTraces]]-0.5)*stackAmplitude;
    addFactor = Reverse[addFactor];
    (*tempData*)tempTraces + addFactor
    ];
